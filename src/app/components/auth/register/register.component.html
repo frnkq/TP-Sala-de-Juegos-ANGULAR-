@@ -1,0 +1,48 @@
+<app-navbar></app-navbar>
+<div class="jumbotron text-center p-0 pt-2 pl-4 pr-4 pb-2 col-md-8 offset-md-2 col-12">
+  <h1 class="mt-0">Registro</h1>
+  <hr>
+  <form [formGroup]="registerForm" (click)="Register()">
+    <div class="row">
+      <div class="col-12 col-md">
+        <label for="name">Nombre</label>
+        <div class="input-group mb-3">
+          <input  type="text" class="form-control" id="name" aria-describedby="basic-addon3"
+            name="name" formControlName="name">
+        </div>
+      </div>
+
+      <div class="col-12 col-md">
+        <label for="surname">Apellido</label>
+        <div class="ip-0 pb-2 nput-group mb-3">
+          <input type="text" class="form-control"
+            name="surname" formControlName="surname"
+            aria-describedby="basic-addon3">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md">
+        <label for="username">Username</label>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" name="username" formControlName="username"
+            aria-describedby="basic-addon3">
+        </div>
+      </div>
+
+      <div class="col-12 col-md">
+        <label for="password">Password</label>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" name="password" formControlName="password"
+            aria-describedby="basic-addon3">
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <button (click)="Register()" class="btn btn-success col-8 offset-2">Registrarme</button>
+    </div>
+
+  </form>
+</div>

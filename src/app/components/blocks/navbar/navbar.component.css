@@ -1,0 +1,13 @@
+.botonBlue
+{
+    padding:4px 7px;
+    border:1px solild black;
+    border-radius: 3px;
+    background-color: #0F63A4;
+    color:white;
+    font-weight:bold;
+}
+.botonBlue:hover
+{
+    background-color:#3176AB;
+}

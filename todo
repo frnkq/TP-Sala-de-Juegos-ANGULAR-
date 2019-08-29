@@ -1,0 +1,20 @@
+1) user from db and return token User.ts
+2) container component checkup if user is not null is shit
+
+----
+register container from
+firebase input
+
+validation error to inputsA
+
+firebase service => not "CreateUser", yes "AddItem", "RemoveItem", etc etc
+UserCrud, sería
+    _collection = users
+    AddUser()
+        -> FirebaseService.AddItem(collection, User)
+
+
+____listado de usuarios
+cambiar toda la interfaz
+agregar un juego
+readme.md
