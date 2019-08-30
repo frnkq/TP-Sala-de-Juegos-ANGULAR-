@@ -2,27 +2,31 @@
 <div class="jumbotron text-center p-0 pb-2 col-md-8 offset-md-2 col-12">
   <hr class="m-0 mb-4">
   <label for="username">
-    <h3>Usuario</h3>
+    <h3>Email</h3>
   </label>
-  <div class="input-group">
-    <input [(ngModel)]="usernameInput" type="text" class="col-12 col-md-6 offset-md-3 form-control" id="username"
-      aria-describedby="basic-addon3">
-  </div>
-  <label for="password" class="mt-3">
-    <h3>Contraseña</h3>
-  </label>
-  <div class="input-group mb-3">
-    <input [(ngModel)]="passwordInput" type="text" class="col-11 col-md-6 offset-md-3 form-control" id="password"
-      aria-describedby="basic-addon3">
-  </div>
-  <div class="">
-    <div class="row">
-      <button (click)="LogIn()" class="btn btn-success col-12 col-md-6 offset-md-3 mt-3 mb-2">Log In</button><br>
+  <form [formGroup]="loginForm" (ngSubmit)="LogIn()">
+    <div class="input-group">
+      <input type="text" class="col-12 col-md-6 offset-md-3 form-control" 
+        name="email" formControlName="email"
+        aria-describedby="basic-addon3">
     </div>
-    <div>
-      <a [routerLink]="routes.auth.register">Registrate</a>
+    <label for="password" class="mt-3">
+      <h3>Contraseña</h3>
+    </label>
+    <div class="input-group mb-3">
+      <input type="password" class="col-11 col-md-6 offset-md-3 form-control"
+        name="password" formControlName="password"
+        aria-describedby="basic-addon3">
     </div>
-  </div>
+    <div class="">
+      <div class="row">
+        <button class="btn btn-success col-12 col-md-6 offset-md-3 mt-3 mb-2">Log In</button><br>
+      </div>
+      <div>
+        <a [routerLink]="routes.auth.register">Registrate</a>
+      </div>
+    </div>
+  </form>
 </div>
 <script>
   var database = firebase.database();

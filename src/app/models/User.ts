@@ -1,7 +1,7 @@
 export class User {
 
     private _name:string;
-    private _surname:string;
+    private _email:string;
     private _username:string;
     private _password:string;
 
@@ -10,9 +10,9 @@ export class User {
         return this._name;
     }
 
-    get surname() :string
+    get email() :string
     {
-        return this._surname;
+        return this._email;
     }
 
     get username(): string
@@ -25,10 +25,10 @@ export class User {
         return this._password;
     }
 
-    constructor(name:string, surname:string, username:string, password:string)
+    constructor(name:string, email:string, username:string, password:string)
     {
         this._name = name;
-        this._surname = surname;
+        this._email = email;
         this._username = username;
         this._password = password;
     }

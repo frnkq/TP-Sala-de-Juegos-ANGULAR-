@@ -18,3 +18,20 @@ ____listado de usuarios
 cambiar toda la interfaz
 agregar un juego
 readme.md
+
+app-listado-de-usuarios [lista]="usuarios" (usuarios es unn array q viene de otro lado)
+    ngFor usuarios  pasados por parametro en html
+    ->
+componente usuario
+
+
+(alta) (grilla usuarios)
+(datos)
+
+
+
+(input)
+(actualizacion de lo q se pone en los inputs)
+
+-------------------
+lista hardcodeada // reemplazar por actualizacion de lo q se pone en los inputs

@@ -9,9 +9,12 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { ContainerComponent } from './components/blocks/container/container.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestoreModule, AngularFirestore } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { FirebaseService } from '../app/services/FirebaseService';
+import { FireAuthService } from '../app/services/FireAuthService';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
 @NgModule({
@@ -20,7 +23,8 @@ import { FirebaseService } from '../app/services/FirebaseService';
     NavbarComponent,
     LoginComponent,
     ContainerComponent,
-    RegisterComponent
+    RegisterComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
@@ -28,9 +32,9 @@ import { FirebaseService } from '../app/services/FirebaseService';
     ReactiveFormsModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
   ],
-  providers: [AngularFirestore, FirebaseService],
+  providers: [AngularFirestore, AngularFireAuth, FirebaseService, FireAuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

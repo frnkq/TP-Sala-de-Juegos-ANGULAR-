@@ -1,25 +1,29 @@
 import { User } from '../models/User';
 import { FirebaseService } from '../services/FirebaseService';
+import { FireAuthService } from '../services/FireAuthService';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 export class UserCrud
 {  
-    private firebase:FirebaseService;
-
-    constructor(private firestore:AngularFirestore)
+    private firebaseService:FirebaseService;
+    private fireAuthService: FireAuthService;
+    constructor(private firestore:AngularFirestore, private fireauth: AngularFireAuth)
     {
-        this.firebase = new FirebaseService(firestore);
+        this.firebaseService = new FirebaseService(firestore);
+        this.fireAuthService = new FireAuthService(fireauth);
     }
 
-    public Register(user: User): boolean
+    public Register(user:User)
     {
-
+        let userId = this.fireAuthService.CreateUser(user.name, user.email, user.username, user.password);
+        this.SaveUser(user);
+        //return true;
     }
-    /*
-    public Register(user:User) :boolean
+
+    public SaveUser(user:User) :boolean
     {
-        this.firebase.CreateUser(user.name, user.surname, user.username, user.password);
+        this.firebaseService.CreateUser(user.name, user.email, user.username);
         return true;
     }
-    */
 }
