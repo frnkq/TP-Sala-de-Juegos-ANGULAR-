@@ -1,8 +1,8 @@
 import { User } from '../models/User';
 import { FirebaseService } from '../services/FirebaseService';
 import { FireAuthService } from '../services/FireAuthService';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFirestore } from 'firebase/firestore';
+import { AngularFireAuth } from 'firebase/auth';
 
 export class UserCrud
 {  

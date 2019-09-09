@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../../../models/User';
 import { UserCrud } from '../../../crud/UserCrud';
-import { AngularFireAuth } from '@angular/fire/auth'
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFireAuth } from 'firebase/auth'
+import { AngularFirestore } from 'firebase/firestore';
 import { Validators, FormControl, FormGroup, FormBuilder } from '@angular/forms';
 
 

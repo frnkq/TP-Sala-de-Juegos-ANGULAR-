@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../../../models/User'
 import { FirebaseService } from '../../../services/FirebaseService';
 import { FireAuthService } from '../../../services/FireAuthService';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFirestore } from 'firebase/firestore';
+import { AngularFireAuth } from 'firebase/auth';
 import { ROUTE_URL } from '../../../Constants';
 import { Validators, FormControl, FormGroup, FormBuilder } from '@angular/forms';
 
@@ -53,8 +53,8 @@ export class LoginComponent implements OnInit {
       console.log(user);      
       if(user != null)
       {
-        localStorage.setItem("user", (user as firebase.User).uid);
-        localStorage.setItem("email", (user as firebase.User).email);
+        localStorage.setItem("user", (user )); //id
+        localStorage.setItem("email", (user));//email
         this.router.navigateByUrl("/welcome");
       }
     }

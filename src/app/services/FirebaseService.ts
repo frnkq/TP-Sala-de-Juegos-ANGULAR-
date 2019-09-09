@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection, QueryDocumentSnapshot} from '@angular/fire/firestore'
+import { AngularFirestore, AngularFirestoreCollection, QueryDocumentSnapshot} from 'firebase/firestore'
 import { Observable } from 'rxjs';
 
 export interface Usuario {username:string, password:string};
