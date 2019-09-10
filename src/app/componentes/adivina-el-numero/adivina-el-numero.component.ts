@@ -10,8 +10,7 @@ import { JuegoAdivina } from '../../clases/juego-adivina'
 export class AdivinaElNumeroComponent implements OnInit {
  @Output() enviarJuego: EventEmitter<any>= new EventEmitter<any>();
 
-  nuevoJuego: JuegoAdivina;
-  Mensajes:string;
+  nuevoJuego: JuegoAdivina; Mensajes:string;
   contador:number;
   ocultarVerificar:boolean;
  
@@ -40,13 +39,13 @@ export class AdivinaElNumeroComponent implements OnInit {
       let mensaje:string;
       switch (this.contador) {
         case 1:
-          mensaje="No, intento fallido, animo";
+          mensaje="Numero incorrecto";
           break;
           case 2:
-          mensaje="No,Te estaras Acercando???";
+          mensaje="Numero incorrecto, ¿te estarás acercando?";
           break;
           case 3:
-          mensaje="No es, Yo crei que la tercera era la vencida.";
+          mensaje="Número incorrecto, creí que la tercera era la vencida";
           break;
           case 4:
           mensaje="No era el  "+this.nuevoJuego.numeroIngresado;

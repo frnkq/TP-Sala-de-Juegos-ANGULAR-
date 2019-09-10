@@ -1,26 +1,37 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <!--app-menu></app-menu-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div style="text-align:center">
-  <h1>
+  <h3>
     {{nuevoJuego.nombre}}!
-  </h1>
- </div>
-<h2></h2>
+  </h3>
+</div>
+<div class="container">
 <form name="juego">
+  <h4><u>Ingrese un número</u></h4>
+  <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text"
+    class="form-control" />
+  <h2>{{nuevoJuego.numeroIngresado}} </h2>
 
-   <label>ingrese numero:  </label>  <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%"/>
-    <h1>{{nuevoJuego.numeroIngresado}}  </h1>
- 
-    <h2 [hidden]="ocultarVerificar"><button  *ngIf="nuevoJuego.numeroSecreto!=0" (click)="verificar()" class="btn btn-success btn-lg">Verificar</button></h2>
- 
-    <h2><button *ngIf="nuevoJuego.numeroSecreto==0 " (click)="generarnumero()"  class="btn btn-info btn-lg">Nuevo número secreto</button></h2>
- 
-    <h2><p *ngIf="nuevoJuego.numeroSecreto!=0" ><i class="fa fa-spinner fa-spin"></i>Esperando que ingrese un número</p></h2>
+  <h2 [hidden]="ocultarVerificar">
+    <button *ngIf="nuevoJuego.numeroSecreto!=0" (click)="verificar()" class="btn btn-success btn-lg">Verificar</button>
+  </h2>
 
-    <h3 [hidden]="!nuevoJuego.gano">usted adivino el número</h3>
-    <h3 [hidden]="nuevoJuego.gano">usted aún no gano </h3>
+  <h2>
+    <button *ngIf="nuevoJuego.numeroSecreto==0 " (click)="generarnumero()" class="btn btn-info btn-lg col-8 col-md-8">Nuevo número
+      secreto</button>
+  </h2>
 
+  <h2>
+    <p *ngIf="nuevoJuego.numeroSecreto!=0">
+      <img src="../../../assets/imagenes/spinner.gif"/>
+      <br>
+      Esperando que ingrese un número
+    </p>
+  </h2>
+
+  <h3 [hidden]="!nuevoJuego.gano">Usted ha adivinado el número</h3>
+  <h3 [hidden]="nuevoJuego.gano">Usted aún no ha ganado</h3>
 
 </form>
+</div>
 <div id="snackbar">{{Mensajes}}</div>
