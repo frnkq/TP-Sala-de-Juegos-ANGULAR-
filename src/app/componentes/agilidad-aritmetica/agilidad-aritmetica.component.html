@@ -2,37 +2,48 @@
 <!--app-menu></app-menu-->
 <!-- index.html -->
 
+<div class="container text-center">
+  <form name="juego">
 
-<form name="juego">
-<ul>
-   <li>
-   Primer número: <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%" readonly/>
-  
-  </li>
-  <li>
-   Operador: <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%" readonly/>
-    
-  </li>
-  <li>
-   Segundo número: <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%" readonly/>
-    
-  </li>
-  <li>
-    Respuesta: <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:50%"/>
-     
-   </li>
-  <li>
-    <h2 [hidden]="ocultarVerificar" ><button (click)="verificar()" class="btn btn-success btn-lg">Verificar {{Tiempo}} </button></h2>
-  </li>
-  <li>
-    <h2 [hidden]="!ocultarVerificar"><button  (click)="NuevoJuego()"  class="btn btn-info btn-lg">Nuevo</button></h2>
-  </li>
-  <li>
-    <h2><p><i class="fa fa-spinner fa-spin"></i>Esperando numero...</p></h2>
+    <div class="row">
+        <label for="numeroIngresado">Primer número</label>
+        <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado"
+          id="numeroIngresado" type="text" class="form-control col-6 col-md-6 offset-3 offset-md-3" readonly />
+    </div>
 
-    <h3 [hidden]="!nuevoJuego.gano">usted adivino el número</h3>
-    <h3 [hidden]="nuevoJuego.gano">usted aún no gano </h3>
-  </li>
-</ul>
+    <div class="row">
+        <label for="numeroIngresado">Operador: </label>
+        <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado"
+          id="numeroIngresado" type="text" class="form-control col-6 col-md-6 offset-3 offset-md-3" readonly />
 
-</form>
+    </div>
+
+    <div class="row">
+        <label for="numeroIngresado">Segundo número</label>
+        <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" id="numeroIngresado"
+          name="numeroIngresado" type="text" class="form-control col-6 col-md-6 offset-3 offset-md-3" readonly />
+    </div>
+
+    <div class="row">
+        <label for="numeroIngreasado">Respuesta: </label>
+        <input [(ngModel)]="nuevoJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text"
+          class="form-control col-6 col-md-6 offset-3 offset-md-3" />
+    </div>
+
+    <div class="row">
+      <h4 [hidden]="ocultarVerificar"><button (click)="verificar()" class="btn btn-success btn-lg">Verificar
+          {{Tiempo}} </button></h4>
+      <h4 [hidden]="!ocultarVerificar"><button (click)="NuevoJuego()" class="btn btn-info btn-lg">Nuevo</button></h4>
+      <p>
+        <img src="../../../assets/imagenes/spinner.gif">
+        <br />
+        Esperando numero...
+      </p>
+    </div>
+
+    <div class="row">
+      <h3 [hidden]="!nuevoJuego.gano">usted adivino el número</h3>
+      <h3 [hidden]="nuevoJuego.gano">usted aún no gano </h3>
+    </div>
+  </form>
+</div>
