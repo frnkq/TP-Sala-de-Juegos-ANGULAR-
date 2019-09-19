@@ -114,6 +114,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/componentes/dedosrapidos/dedosrapidos.component.html":
+/*!************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/componentes/dedosrapidos/dedosrapidos.component.html ***!
+  \************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"fastFingers\">\n    <h1>Dedos rápidos</h1>\n    <h2>Descubre cuantas palabras puedes escribir en un minuto</h2>\n    <button *ngIf=\"!isGameRunning\" (click)=\"startGame()\" class=\"button\">Empezar</button>\n\n    <div *ngIf=\"isGameRunning\" class=\"row\">\n        <div class=\"col\">\n            <h3 class=\"nextWord\">\n                {{ nextWord }}\n            </h3>\n            <h2 class=\"currentWord\">\n                {{ currentWord }}\n            </h2>\n        </div>\n    </div>\n    <br>\n    <textarea rows=\"1\" #myInput *ngIf=\"isGameRunning\" [ngClass]=\"wordsDontMatch ? 'unmatch' : 'match'\" [(ngModel)]=\"stringWritten\"\n        (ngModelChange)=\"checkAccuracy($event)\">\n</textarea>\n    <div *ngIf=\"isGameRunning\" class=\"row\">\n        Tiempo restante:\n        <span [ngClass]=\"timeLeft <= 15 ? 'redText' : (timeLeft <= 30 ? 'yellowText' : 'whiteText')\">\n            {{ timeLeft }}\n        </span>\n        <br>\n        Puntaje: {{ score }}\n    </div>\n    <div *ngIf=\"isGameFinished\">\n        <h1>Felicitaciones, tu puntaje es: {{ score }} </h1>\n    </div>\n</div>");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/componentes/error/error.component.html":
 /*!**********************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/componentes/error/error.component.html ***!
@@ -253,7 +266,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\n  <div class=\"row text-center\">\n\n    <div class=\"col-4 col-md-4 p-5\">\n\n      <div class=\"row\">\n        <div class=\"imagen cerebro\">\n\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <h4>Velocidad y agilidad aritmética </h4>\n        <p class=\"title\">Juego de agilidad mental</p>\n        <p>UTN FRA </p>\n        <p> <button class=\"button\" (click)=\"Juego('Agilidad')\">Jugar</button></p>\n      </div>\n\n    </div>\n\n\n    <div class=\"col-4 col-md-4\">\n\n      <div class=\"row\">\n        <div class=\"imagen ppt\">\n\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <h4>Piedra Papel o Tijera</h4>\n        <p class=\"title\">Juega contra la máquina</p>\n        <p>UTN FRA </p>\n        <p> <button class=\"button\" (click)=\"Juego('PPT')\">Jugar</button></p>\n      </div>\n\n    </div>\n\n\n    <div class=\"col-4 col-md-4\">\n\n      <div class=\"row\">\n        <div class=\"imagen adivina\">\n          \n        </div>\n      </div>\n\n      <div class=\"row margin\">\n        <h4 >Adivina el número secreto</h4>\n        <p class=\"title\">Juega de estrategia</p>\n        <p>UTN FRA </p>\n        <p> <button class=\"button\" (click)=\"Juego('Adivina')\">Jugar</button></p>\n      </div>\n\n    </div>\n\n  </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\n  <div class=\"row text-center\">\n\n    <div class=\"col-3 col-md-3 p-5\">\n\n      <div class=\"row\">\n        <div class=\"imagen cerebro\">\n\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <h4>Velocidad y agilidad aritmética </h4>\n        <p class=\"title\">Juego de agilidad mental</p>\n        <p>UTN FRA </p>\n        <p> <button class=\"button\" (click)=\"Juego('Agilidad')\">Jugar</button></p>\n      </div>\n\n    </div>\n\n\n    <div class=\"col-3 col-md-3\">\n\n      <div class=\"row\">\n        <div class=\"imagen ppt\">\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <h4>Piedra Papel o Tijera</h4>\n        <p class=\"title\">Juega contra la máquina</p>\n        <p>UTN FRA </p>\n        <p> <button class=\"button\" (click)=\"Juego('PPT')\">Jugar</button></p>\n      </div>\n\n    </div>\n\n\n    <div class=\"col-3 col-md-3\">\n\n      <div class=\"row\">\n        <div class=\"imagen adivina\">\n          \n        </div>\n      </div>\n\n      <div class=\"row margin\">\n        <h4 >Adivina el número secreto</h4>\n        <p class=\"title\">Juega de estrategia</p>\n        <p>UTN FRA </p>\n        <p> <button class=\"button\" (click)=\"Juego('Adivina')\">Jugar</button></p>\n      </div>\n\n    </div>\n\n    <div class=\"col-3 col-md-3\">\n\n      <div class=\"row\">\n        <div class=\"imagen fastfingers\">\n          \n        </div>\n      </div>\n\n      <div class=\"row margin\">\n        <h4>Dedos rápidos</h4>\n        <p class=\"title\">Compite midiendo tu velocidad de tipeo</p>\n        <p>UTN FRA </p>\n        <p> <button class=\"button\" (click)=\"Juego('FastFingers')\">Jugar</button></p>\n      </div>\n\n    </div>\n  </div>\n</div>");
 
 /***/ }),
 
@@ -624,6 +637,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
 /* harmony import */ var _componentes_input_jugadores_input_jugadores_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./componentes/input-jugadores/input-jugadores.component */ "./src/app/componentes/input-jugadores/input-jugadores.component.ts");
 /* harmony import */ var _pipes_sexo_pipe__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./pipes/sexo.pipe */ "./src/app/pipes/sexo.pipe.ts");
+/* harmony import */ var _componentes_dedosrapidos_dedosrapidos_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./componentes/dedosrapidos/dedosrapidos.component */ "./src/app/componentes/dedosrapidos/dedosrapidos.component.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
 
 
 
@@ -673,6 +688,8 @@ const MiRuteo = [{path: 'error' , component: ErrorComponent},
 
 
 
+
+
 let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -700,13 +717,15 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _componentes_mapa_de_google_mapa_de_google_component__WEBPACK_IMPORTED_MODULE_31__["MapaDeGoogleComponent"],
             _componentes_jugadores_listado_jugadores_listado_component__WEBPACK_IMPORTED_MODULE_21__["JugadoresListadoComponent"],
             _componentes_input_jugadores_input_jugadores_component__WEBPACK_IMPORTED_MODULE_33__["InputJugadoresComponent"],
-            _pipes_sexo_pipe__WEBPACK_IMPORTED_MODULE_34__["SexoPipe"]
+            _pipes_sexo_pipe__WEBPACK_IMPORTED_MODULE_34__["SexoPipe"],
+            _componentes_dedosrapidos_dedosrapidos_component__WEBPACK_IMPORTED_MODULE_35__["DedosrapidosComponent"],
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
             _ruteando_ruteando_module__WEBPACK_IMPORTED_MODULE_19__["RuteandoModule"],
             _angular_http__WEBPACK_IMPORTED_MODULE_8__["HttpModule"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_36__["HttpClientModule"],
             _agm_core__WEBPACK_IMPORTED_MODULE_32__["AgmCoreModule"].forRoot({
                 apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'
             })
@@ -1184,6 +1203,142 @@ CabeceraComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./cabecera.component.css */ "./src/app/componentes/cabecera/cabecera.component.css")).default]
     })
 ], CabeceraComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/componentes/dedosrapidos/dedosrapidos.component.scss":
+/*!**********************************************************************!*\
+  !*** ./src/app/componentes/dedosrapidos/dedosrapidos.component.scss ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".fastFingers {\n  background-color: #333;\n  color: white;\n  margin: none;\n  padding: 20px;\n  text-align: center;\n}\n\n.unmatch {\n  color: white;\n  background-color: red;\n}\n\n.match {\n  color: white;\n  background-color: #333;\n}\n\n.button {\n  border: none;\n  background-color: #aaa;\n  color: white;\n  font-weight: bold;\n  padding: 10px;\n  border-radius: 10px;\n  width: 200px;\n}\n\n.button:hover {\n  background-color: #95eb34;\n}\n\n.currentWord {\n  font-size: 2.2em;\n  color: #95eb34;\n}\n\n.nextWord {\n  font-size: 1.7em;\n  font-style: oblique;\n}\n\ntextarea {\n  border: 1px solid white;\n  padding: 20px;\n  text-align: center;\n  font-size: 2em;\n}\n\n.yellowText {\n  color: yellow;\n}\n\n.redText {\n  color: red;\n}\n\n.whiteText {\n  color: white;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9zcnYvaHR0cC91dG4vbGFiNC9UUC1TYWxhLWRlLUp1ZWdvcy1BTkdVTEFSLS9zcmMvYXBwL2NvbXBvbmVudGVzL2RlZG9zcmFwaWRvcy9kZWRvc3JhcGlkb3MuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2NvbXBvbmVudGVzL2RlZG9zcmFwaWRvcy9kZWRvc3JhcGlkb3MuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFFSSxzQkFBQTtFQUNBLFlBQUE7RUFDQSxZQUFBO0VBQ0EsYUFBQTtFQUNBLGtCQUFBO0FDQUo7O0FERUE7RUFFSSxZQUFBO0VBQ0EscUJBQUE7QUNBSjs7QURFQTtFQUVJLFlBQUE7RUFDQSxzQkFBQTtBQ0FKOztBREVBO0VBRUksWUFBQTtFQUNBLHNCQUFBO0VBQ0EsWUFBQTtFQUNBLGlCQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsWUFBQTtBQ0FKOztBREdBO0VBRUkseUJBQUE7QUNESjs7QURJQTtFQUdJLGdCQUFBO0VBQ0EsY0FBQTtBQ0hKOztBRE1BO0VBRUksZ0JBQUE7RUFDQSxtQkFBQTtBQ0pKOztBRE9BO0VBRUksdUJBQUE7RUFDQSxhQUFBO0VBQ0Esa0JBQUE7RUFDQSxjQUFBO0FDTEo7O0FEUUE7RUFFSSxhQUFBO0FDTko7O0FEUUE7RUFFSSxVQUFBO0FDTko7O0FEUUE7RUFFSSxZQUFBO0FDTkoiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRlcy9kZWRvc3JhcGlkb3MvZGVkb3NyYXBpZG9zLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZhc3RGaW5nZXJzXHJcbntcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMzMzM7XHJcbiAgICBjb2xvcjp3aGl0ZTtcclxuICAgIG1hcmdpbjpub25lO1xyXG4gICAgcGFkZGluZzoyMHB4O1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcbi51bm1hdGNoXHJcbntcclxuICAgIGNvbG9yOndoaXRlO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjpyZWQ7XHJcbn1cclxuLm1hdGNoXHJcbnsgXHJcbiAgICBjb2xvcjp3aGl0ZTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMzMzM7XHJcbn1cclxuLmJ1dHRvblxyXG57XHJcbiAgICBib3JkZXI6bm9uZTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNhYWE7XHJcbiAgICBjb2xvcjp3aGl0ZTtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgcGFkZGluZzogMTBweDtcclxuICAgIGJvcmRlci1yYWRpdXM6IDEwcHg7XHJcbiAgICB3aWR0aDogMjAwcHg7XHJcbn1cclxuXHJcbi5idXR0b246aG92ZXJcclxue1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzk1ZWIzNDtcclxufVxyXG5cclxuLmN1cnJlbnRXb3JkXHJcbntcclxuXHJcbiAgICBmb250LXNpemU6IDIuMmVtOztcclxuICAgIGNvbG9yOiAjOTVlYjM0O1xyXG59XHJcblxyXG4ubmV4dFdvcmRcclxue1xyXG4gICAgZm9udC1zaXplOiAxLjdlbTtcclxuICAgIGZvbnQtc3R5bGU6IG9ibGlxdWU7XHJcbn1cclxuXHJcbnRleHRhcmVhXHJcbntcclxuICAgIGJvcmRlcjoxcHggc29saWQgd2hpdGU7XHJcbiAgICBwYWRkaW5nOjIwcHg7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBmb250LXNpemU6IDJlbTtcclxufVxyXG5cclxuLnllbGxvd1RleHRcclxue1xyXG4gICAgY29sb3I6eWVsbG93O1xyXG59XHJcbi5yZWRUZXh0XHJcbntcclxuICAgIGNvbG9yOnJlZDtcclxufVxyXG4ud2hpdGVUZXh0XHJcbntcclxuICAgIGNvbG9yOndoaXRlO1xyXG59IiwiLmZhc3RGaW5nZXJzIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzMzMztcbiAgY29sb3I6IHdoaXRlO1xuICBtYXJnaW46IG5vbmU7XG4gIHBhZGRpbmc6IDIwcHg7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuLnVubWF0Y2gge1xuICBjb2xvcjogd2hpdGU7XG4gIGJhY2tncm91bmQtY29sb3I6IHJlZDtcbn1cblxuLm1hdGNoIHtcbiAgY29sb3I6IHdoaXRlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMzMzO1xufVxuXG4uYnV0dG9uIHtcbiAgYm9yZGVyOiBub25lO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjYWFhO1xuICBjb2xvcjogd2hpdGU7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICBwYWRkaW5nOiAxMHB4O1xuICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICB3aWR0aDogMjAwcHg7XG59XG5cbi5idXR0b246aG92ZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjOTVlYjM0O1xufVxuXG4uY3VycmVudFdvcmQge1xuICBmb250LXNpemU6IDIuMmVtO1xuICBjb2xvcjogIzk1ZWIzNDtcbn1cblxuLm5leHRXb3JkIHtcbiAgZm9udC1zaXplOiAxLjdlbTtcbiAgZm9udC1zdHlsZTogb2JsaXF1ZTtcbn1cblxudGV4dGFyZWEge1xuICBib3JkZXI6IDFweCBzb2xpZCB3aGl0ZTtcbiAgcGFkZGluZzogMjBweDtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBmb250LXNpemU6IDJlbTtcbn1cblxuLnllbGxvd1RleHQge1xuICBjb2xvcjogeWVsbG93O1xufVxuXG4ucmVkVGV4dCB7XG4gIGNvbG9yOiByZWQ7XG59XG5cbi53aGl0ZVRleHQge1xuICBjb2xvcjogd2hpdGU7XG59Il19 */");
+
+/***/ }),
+
+/***/ "./src/app/componentes/dedosrapidos/dedosrapidos.component.ts":
+/*!********************************************************************!*\
+  !*** ./src/app/componentes/dedosrapidos/dedosrapidos.component.ts ***!
+  \********************************************************************/
+/*! exports provided: DedosrapidosComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DedosrapidosComponent", function() { return DedosrapidosComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
+
+
+let DedosrapidosComponent = class DedosrapidosComponent {
+    constructor(http) {
+        this.http = http;
+        this.http.get('../../assets/words.txt', { responseType: 'text' }).subscribe(data => this.populateWordsArray(data));
+        this.listOfWords = [];
+        this.timeLeft = 60;
+        this.score = 0;
+        this.isGameRunning = false;
+        this.wordsDontMatch = false;
+        this.isGameFinished = false;
+    }
+    //focus textarea on show
+    ngAfterViewInit() {
+        this.textarea.changes.subscribe((list) => {
+            if (list.length > 0) {
+                list.first.nativeElement.focus();
+            }
+        });
+    }
+    populateWordsArray(textFileContent) {
+        for (const line of textFileContent.split(/[\r\n]+/)) {
+            this.listOfWords.push(line);
+        }
+    }
+    ngOnInit() {
+    }
+    checkAccuracy($event) {
+        //principle of inocence
+        this.wordsDontMatch = false;
+        if (this.isGameRunning) {
+            //flag as invalid when a character doesn't match
+            for (let i = 0; i < this.stringWritten.length; i++) {
+                if (this.stringWritten[i] != this.currentWord[i]) {
+                    this.wordsDontMatch = true;
+                }
+            }
+            //correct word
+            if ($event == this.currentWord) {
+                this.score++;
+                this.getNewWord();
+                this.stringWritten = "";
+                this.wordsDontMatch = false;
+            }
+        }
+    }
+    countDown() {
+        var that = this;
+        this.interval = setInterval(function (passTime) {
+            if (that.timeLeft <= 1) {
+                clearInterval(that.interval);
+                that.endGame();
+            }
+            that.timeLeft--;
+        }, 1000);
+    }
+    startGame() {
+        this.isGameFinished = false;
+        this.timeLeft = 60;
+        this.score = 0;
+        this.countDown();
+        this.isGameRunning = true;
+        this.getNewWord();
+    }
+    getNewWord() {
+        this.currentWord = this.nextWord == undefined ? this.getRandomWord() : this.nextWord;
+        this.nextWord = this.getRandomWord();
+    }
+    getRandomWord() {
+        let random = Math.floor(Math.random() * (this.listOfWords.length - 0)) + 0;
+        return this.listOfWords[random];
+    }
+    endGame() {
+        this.isGameRunning = false;
+        this.isGameFinished = true;
+        this.stringWritten = "";
+    }
+};
+DedosrapidosComponent.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
+], DedosrapidosComponent.prototype, "currentWord", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
+], DedosrapidosComponent.prototype, "nextWord", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], DedosrapidosComponent.prototype, "stringWritten", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
+], DedosrapidosComponent.prototype, "timeLeft", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChildren"])("myInput")
+], DedosrapidosComponent.prototype, "textarea", void 0);
+DedosrapidosComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-game',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./dedosrapidos.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/componentes/dedosrapidos/dedosrapidos.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./dedosrapidos.component.scss */ "./src/app/componentes/dedosrapidos/dedosrapidos.component.scss")).default]
+    })
+], DedosrapidosComponent);
 
 
 
@@ -1770,7 +1925,7 @@ MapaDeGoogleComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".card {\n    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);\n    transition: 0.3s;\n    border-radius: 5px; /* 5px rounded corners */\n    text-align: center;\n}\n\nimg {\n    border-radius: 5px 5px 0 0;\n}\n\n/* Add some padding inside the card container */\n\n.button{\n    display: inline-block;\n    padding: 5px 15px;\n    text-align: center;\n    cursor: pointer;\n    color: #fff;\n    background-color: #222222;\n    border-radius: 15px;\n    box-shadow: 0 3px #999;\n    border: none;\n    text-align: center;\n    cursor: pointer;\n    width: 20%;\n  }\n\n.button:hover {background-color: #3e8e41}\n\n.button:active {\n    background-color: #3e8e41;\n    box-shadow: 0 5px #666;\n    transform: translateY(4px);\n  }\n\n.imagen\n  {\n    height:400px;\n    background-size: cover;\n  }\n\n.cerebro\n  {\n    background-image: url('cerebro.jpg');\n  }\n\n.ppt\n  {\n    background-image: url('ppt.jpg');\n  }\n\n.adivina\n  {\n    background-image: url('adivina.png');\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50ZXMvbWVudS1jYXJkL21lbnUtY2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksdUNBQXVDO0lBQ3ZDLGdCQUFnQjtJQUNoQixrQkFBa0IsRUFBRSx3QkFBd0I7SUFDNUMsa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0ksMEJBQTBCO0FBQzlCOztBQUFDLCtDQUErQzs7QUFHaEQ7SUFDSSxxQkFBcUI7SUFDckIsaUJBQWlCO0lBQ2pCLGtCQUFrQjtJQUNsQixlQUFlO0lBQ2YsV0FBVztJQUNYLHlCQUF5QjtJQUN6QixtQkFBbUI7SUFDbkIsc0JBQXNCO0lBQ3RCLFlBQVk7SUFDWixrQkFBa0I7SUFDbEIsZUFBZTtJQUNmLFVBQVU7RUFDWjs7QUFFQSxlQUFlLHlCQUF5Qjs7QUFFeEM7SUFDRSx5QkFBeUI7SUFDekIsc0JBQXNCO0lBQ3RCLDBCQUEwQjtFQUM1Qjs7QUFFQTs7SUFFRSxZQUFZO0lBQ1osc0JBQXNCO0VBQ3hCOztBQUNBOztJQUVFLG9DQUE2RDtFQUMvRDs7QUFDQTs7SUFFRSxnQ0FBeUQ7RUFDM0Q7O0FBQ0E7O0lBRUUsb0NBQTZEO0VBQy9EIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50ZXMvbWVudS1jYXJkL21lbnUtY2FyZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNhcmQge1xuICAgIGJveC1zaGFkb3c6IDAgNHB4IDhweCAwIHJnYmEoMCwwLDAsMC4yKTtcbiAgICB0cmFuc2l0aW9uOiAwLjNzO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDsgLyogNXB4IHJvdW5kZWQgY29ybmVycyAqL1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuaW1nIHtcbiAgICBib3JkZXItcmFkaXVzOiA1cHggNXB4IDAgMDtcbn0vKiBBZGQgc29tZSBwYWRkaW5nIGluc2lkZSB0aGUgY2FyZCBjb250YWluZXIgKi9cblxuXG4uYnV0dG9ue1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgICBwYWRkaW5nOiA1cHggMTVweDtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGNvbG9yOiAjZmZmO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICMyMjIyMjI7XG4gICAgYm9yZGVyLXJhZGl1czogMTVweDtcbiAgICBib3gtc2hhZG93OiAwIDNweCAjOTk5O1xuICAgIGJvcmRlcjogbm9uZTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIHdpZHRoOiAyMCU7XG4gIH1cbiAgXG4gIC5idXR0b246aG92ZXIge2JhY2tncm91bmQtY29sb3I6ICMzZThlNDF9XG4gIFxuICAuYnV0dG9uOmFjdGl2ZSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzNlOGU0MTtcbiAgICBib3gtc2hhZG93OiAwIDVweCAjNjY2O1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSg0cHgpO1xuICB9XG5cbiAgLmltYWdlblxuICB7XG4gICAgaGVpZ2h0OjQwMHB4O1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gIH1cbiAgLmNlcmVicm9cbiAge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi4vLi4vLi4vYXNzZXRzL2ltYWdlbmVzL2NlcmVicm8uanBnJyk7XG4gIH1cbiAgLnBwdFxuICB7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi8uLi8uLi9hc3NldHMvaW1hZ2VuZXMvcHB0LmpwZycpO1xuICB9XG4gIC5hZGl2aW5hXG4gIHtcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uLy4uLy4uL2Fzc2V0cy9pbWFnZW5lcy9hZGl2aW5hLnBuZycpO1xuICB9Il19 */");
+/* harmony default export */ __webpack_exports__["default"] = (".card {\n    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);\n    transition: 0.3s;\n    border-radius: 5px; /* 5px rounded corners */\n    text-align: center;\n}\n\nimg {\n    border-radius: 5px 5px 0 0;\n}\n\n/* Add some padding inside the card container */\n\n.button{\n    display: inline-block;\n    padding: 5px 15px;\n    text-align: center;\n    cursor: pointer;\n    color: #fff;\n    background-color: #222222;\n    border-radius: 15px;\n    box-shadow: 0 3px #999;\n    border: none;\n    text-align: center;\n    cursor: pointer;\n    width: 20%;\n  }\n\n.button:hover {background-color: #3e8e41}\n\n.button:active {\n    background-color: #3e8e41;\n    box-shadow: 0 5px #666;\n    transform: translateY(4px);\n  }\n\n.imagen\n  {\n    height:400px;\n    background-size: cover;\n  }\n\n.cerebro\n  {\n    background-image: url('cerebro.jpg');\n  }\n\n.ppt\n  {\n    background-image: url('ppt.jpg');\n  }\n\n.adivina\n  {\n    background-image: url('adivina.png');\n  }\n\n.fastfingers\n  {\n    background-image: url('fastfingers.jpg');\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50ZXMvbWVudS1jYXJkL21lbnUtY2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksdUNBQXVDO0lBQ3ZDLGdCQUFnQjtJQUNoQixrQkFBa0IsRUFBRSx3QkFBd0I7SUFDNUMsa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0ksMEJBQTBCO0FBQzlCOztBQUFDLCtDQUErQzs7QUFHaEQ7SUFDSSxxQkFBcUI7SUFDckIsaUJBQWlCO0lBQ2pCLGtCQUFrQjtJQUNsQixlQUFlO0lBQ2YsV0FBVztJQUNYLHlCQUF5QjtJQUN6QixtQkFBbUI7SUFDbkIsc0JBQXNCO0lBQ3RCLFlBQVk7SUFDWixrQkFBa0I7SUFDbEIsZUFBZTtJQUNmLFVBQVU7RUFDWjs7QUFFQSxlQUFlLHlCQUF5Qjs7QUFFeEM7SUFDRSx5QkFBeUI7SUFDekIsc0JBQXNCO0lBQ3RCLDBCQUEwQjtFQUM1Qjs7QUFFQTs7SUFFRSxZQUFZO0lBQ1osc0JBQXNCO0VBQ3hCOztBQUNBOztJQUVFLG9DQUE2RDtFQUMvRDs7QUFDQTs7SUFFRSxnQ0FBeUQ7RUFDM0Q7O0FBQ0E7O0lBRUUsb0NBQTZEO0VBQy9EOztBQUNBOztJQUVFLHdDQUFpRTtFQUNuRSIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudGVzL21lbnUtY2FyZC9tZW51LWNhcmQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jYXJkIHtcbiAgICBib3gtc2hhZG93OiAwIDRweCA4cHggMCByZ2JhKDAsMCwwLDAuMik7XG4gICAgdHJhbnNpdGlvbjogMC4zcztcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7IC8qIDVweCByb3VuZGVkIGNvcm5lcnMgKi9cbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbmltZyB7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4IDVweCAwIDA7XG59LyogQWRkIHNvbWUgcGFkZGluZyBpbnNpZGUgdGhlIGNhcmQgY29udGFpbmVyICovXG5cblxuLmJ1dHRvbntcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgcGFkZGluZzogNXB4IDE1cHg7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBjb2xvcjogI2ZmZjtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMjIyMjIyO1xuICAgIGJvcmRlci1yYWRpdXM6IDE1cHg7XG4gICAgYm94LXNoYWRvdzogMCAzcHggIzk5OTtcbiAgICBib3JkZXI6IG5vbmU7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICB3aWR0aDogMjAlO1xuICB9XG4gIFxuICAuYnV0dG9uOmhvdmVyIHtiYWNrZ3JvdW5kLWNvbG9yOiAjM2U4ZTQxfVxuICBcbiAgLmJ1dHRvbjphY3RpdmUge1xuICAgIGJhY2tncm91bmQtY29sb3I6ICMzZThlNDE7XG4gICAgYm94LXNoYWRvdzogMCA1cHggIzY2NjtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoNHB4KTtcbiAgfVxuXG4gIC5pbWFnZW5cbiAge1xuICAgIGhlaWdodDo0MDBweDtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICB9XG4gIC5jZXJlYnJvXG4gIHtcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uLy4uLy4uL2Fzc2V0cy9pbWFnZW5lcy9jZXJlYnJvLmpwZycpO1xuICB9XG4gIC5wcHRcbiAge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi4vLi4vLi4vYXNzZXRzL2ltYWdlbmVzL3BwdC5qcGcnKTtcbiAgfVxuICAuYWRpdmluYVxuICB7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi8uLi8uLi9hc3NldHMvaW1hZ2VuZXMvYWRpdmluYS5wbmcnKTtcbiAgfVxuICAuZmFzdGZpbmdlcnNcbiAge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi4vLi4vLi4vYXNzZXRzL2ltYWdlbmVzL2Zhc3RmaW5nZXJzLmpwZycpO1xuICB9Il19 */");
 
 /***/ }),
 
@@ -1810,6 +1965,9 @@ let MenuCardComponent = class MenuCardComponent {
                 break;
             case 'AgilidadaMasListado':
                 this.router.navigate(['/Juegos/AgilidadaMasListado']);
+                break;
+            case 'FastFingers':
+                this.router.navigate(['/Juegos/DedosRapidos']);
                 break;
         }
     }
@@ -2105,9 +2263,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _componentes_listado_de_paises_listado_de_paises_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../componentes/listado-de-paises/listado-de-paises.component */ "./src/app/componentes/listado-de-paises/listado-de-paises.component.ts");
 /* harmony import */ var _componentes_mapa_de_google_mapa_de_google_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../componentes/mapa-de-google/mapa-de-google.component */ "./src/app/componentes/mapa-de-google/mapa-de-google.component.ts");
 /* harmony import */ var _componentes_jugadores_listado_jugadores_listado_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../componentes/jugadores-listado/jugadores-listado.component */ "./src/app/componentes/jugadores-listado/jugadores-listado.component.ts");
+/* harmony import */ var _componentes_dedosrapidos_dedosrapidos_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../componentes/dedosrapidos/dedosrapidos.component */ "./src/app/componentes/dedosrapidos/dedosrapidos.component.ts");
 
 
 // importo del module principal
+
 
 
 
@@ -2135,13 +2295,17 @@ const MiRuteo = [
     { path: 'Principal', component: _componentes_principal_principal_component__WEBPACK_IMPORTED_MODULE_6__["PrincipalComponent"] },
     { path: 'Listado', component: _componentes_listado_listado_component__WEBPACK_IMPORTED_MODULE_10__["ListadoComponent"] },
     { path: 'Paises', component: _componentes_listado_de_paises_listado_de_paises_component__WEBPACK_IMPORTED_MODULE_15__["ListadoDePaisesComponent"] },
-    { path: 'Juegos',
+    {
+        path: 'Juegos',
         component: _componentes_juegos_juegos_component__WEBPACK_IMPORTED_MODULE_11__["JuegosComponent"],
-        children: [{ path: '', component: _componentes_menu_card_menu_card_component__WEBPACK_IMPORTED_MODULE_13__["MenuCardComponent"] },
+        children: [
+            { path: '', component: _componentes_menu_card_menu_card_component__WEBPACK_IMPORTED_MODULE_13__["MenuCardComponent"] },
             { path: 'Adivina', component: _componentes_adivina_el_numero_adivina_el_numero_component__WEBPACK_IMPORTED_MODULE_3__["AdivinaElNumeroComponent"] },
             { path: 'AdivinaMasListado', component: _componentes_adivina_mas_listado_adivina_mas_listado_component__WEBPACK_IMPORTED_MODULE_8__["AdivinaMasListadoComponent"] },
             { path: 'AgilidadaMasListado', component: _componentes_agilidad_mas_listado_agilidad_mas_listado_component__WEBPACK_IMPORTED_MODULE_9__["AgilidadMasListadoComponent"] },
-            { path: 'Agilidad', component: _componentes_agilidad_aritmetica_agilidad_aritmetica_component__WEBPACK_IMPORTED_MODULE_7__["AgilidadAritmeticaComponent"] }]
+            { path: 'Agilidad', component: _componentes_agilidad_aritmetica_agilidad_aritmetica_component__WEBPACK_IMPORTED_MODULE_7__["AgilidadAritmeticaComponent"] },
+            { path: 'DedosRapidos', component: _componentes_dedosrapidos_dedosrapidos_component__WEBPACK_IMPORTED_MODULE_18__["DedosrapidosComponent"] }
+        ]
     },
     { path: '**', component: _componentes_error_error_component__WEBPACK_IMPORTED_MODULE_5__["ErrorComponent"] },
     { path: 'error', component: _componentes_error_error_component__WEBPACK_IMPORTED_MODULE_5__["ErrorComponent"] }
