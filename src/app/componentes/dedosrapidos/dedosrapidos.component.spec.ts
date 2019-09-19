@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FastFingersComponent } from './fast-fingers.component';
+import { DedosrapidosComponent } from './dedosrapidos.component';
 
-describe('FastFingersComponent', () => {
-  let component: FastFingersComponent;
-  let fixture: ComponentFixture<FastFingersComponent>;
+describe('DedosrapidosComponent', () => {
+  let component: DedosrapidosComponent;
+  let fixture: ComponentFixture<DedosrapidosComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FastFingersComponent ]
+      declarations: [ DedosrapidosComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FastFingersComponent);
+    fixture = TestBed.createComponent(DedosrapidosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -53,8 +53,8 @@ import { MapaDeGoogleComponent } from './componentes/mapa-de-google/mapa-de-goog
 import { AgmCoreModule } from '@agm/core';
 import { InputJugadoresComponent } from './componentes/input-jugadores/input-jugadores.component';
 import { SexoPipe } from './pipes/sexo.pipe';
-import { FastFingersComponent } from './componentes/fast-fingers/fast-fingers.component';
-
+import { DedosrapidosComponent } from './componentes/dedosrapidos/dedosrapidos.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -80,13 +80,14 @@ import { FastFingersComponent } from './componentes/fast-fingers/fast-fingers.co
     JugadoresListadoComponent,
     InputJugadoresComponent,
     SexoPipe,
-    FastFingersComponent
+    DedosrapidosComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RuteandoModule,
     HttpModule,
+    HttpClientModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'
     })

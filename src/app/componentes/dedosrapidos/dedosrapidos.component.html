@@ -1,0 +1,31 @@
+<div class="fastFingers">
+    <h1>Dedos rápidos</h1>
+    <h2>Descubre cuantas palabras puedes escribir en un minuto</h2>
+    <button *ngIf="!isGameRunning" (click)="startGame()" class="button">Empezar</button>
+
+    <div *ngIf="isGameRunning" class="row">
+        <div class="col">
+            <h3 class="nextWord">
+                {{ nextWord }}
+            </h3>
+            <h2 class="currentWord">
+                {{ currentWord }}
+            </h2>
+        </div>
+    </div>
+    <br>
+    <textarea rows="1" #myInput *ngIf="isGameRunning" [ngClass]="wordsDontMatch ? 'unmatch' : 'match'" [(ngModel)]="stringWritten"
+        (ngModelChange)="checkAccuracy($event)">
+</textarea>
+    <div *ngIf="isGameRunning" class="row">
+        Tiempo restante:
+        <span [ngClass]="timeLeft <= 15 ? 'redText' : (timeLeft <= 30 ? 'yellowText' : 'whiteText')">
+            {{ timeLeft }}
+        </span>
+        <br>
+        Puntaje: {{ score }}
+    </div>
+    <div *ngIf="isGameFinished">
+        <h1>Felicitaciones, tu puntaje es: {{ score }} </h1>
+    </div>
+</div>

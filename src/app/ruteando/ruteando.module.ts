@@ -22,7 +22,7 @@ import { ListadoDePaisesComponent } from '../componentes/listado-de-paises/lista
 import { MapaDeGoogleComponent } from '../componentes/mapa-de-google/mapa-de-google.component'
 import { JugadoresListadoComponent } from '../componentes/jugadores-listado/jugadores-listado.component';
 
-import { FastFingersComponent } from '../componentes/fast-fingers/fast-fingers.component';
+import { DedosrapidosComponent } from '../componentes/dedosrapidos/dedosrapidos.component';
 // declaro donde quiero que se dirija
 const MiRuteo = [
   { path: 'Jugadores', component: JugadoresListadoComponent },
@@ -45,7 +45,7 @@ const MiRuteo = [
         { path: 'AdivinaMasListado', component: AdivinaMasListadoComponent },
         { path: 'AgilidadaMasListado', component: AgilidadMasListadoComponent },
         { path: 'Agilidad', component: AgilidadAritmeticaComponent },
-        { path: 'DedosRapidos', component: FastFingersComponent }
+        { path: 'DedosRapidos', component: DedosrapidosComponent }
       ]
   },
   { path: '**', component: ErrorComponent },
