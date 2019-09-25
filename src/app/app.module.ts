@@ -43,6 +43,12 @@ import { InputJugadoresComponent } from './componentes/input-jugadores/input-jug
 import { SexoPipe } from './pipes/sexo.pipe';
 import { DedosrapidosComponent } from './componentes/dedosrapidos/dedosrapidos.component';
 import { HttpClientModule } from '@angular/common/http';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { FirestoreService } from './services/firestore.service';
+import { FireauthService } from './services/fireauth.service'
 @NgModule({
   declarations: [
     AppComponent,
@@ -78,12 +84,22 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'
+    }),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp({
+      apiKey: "AIzaSyAIKTXAKHZh4-UXru7FaG7IHkAR3Mx4veA",
+      authDomain: "saladejuegos-d829d.firebaseapp.com",
+      databaseURL: "https://saladejuegos-d829d.firebaseio.com",
+      projectId: "saladejuegos-d829d",
+      storageBucket: "saladejuegos-d829d.appspot.com",
+      messagingSenderId: "857042851772",
+      appId: "1:857042851772:web:2fe99d6e37a85cab"
+
     })
-    // NgbModule.forRoot(MiRuteo),
-    // importo el ruteo
-    // RouterModule.forRoot(MiRuteo)
   ],
-  providers: [JuegoServiceService, MiHttpService, PaisesService, ArchivosJugadoresService, JugadoresService],
+  providers: [JuegoServiceService, MiHttpService, PaisesService, ArchivosJugadoresService, JugadoresService, 
+  FirestoreService, FireauthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

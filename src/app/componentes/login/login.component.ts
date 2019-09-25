@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserCrud } from 'src/app/crud/UserCrud';
 import { User } from 'src/app/models/User';
-import { FirebaseService } from 'src/app/services/FirebaseService';
-import { FireAuthService } from 'src/app/services/FireAuthService';
+import { FirestoreService } from 'src/app/services/firestore.service';
+import { FireauthService } from 'src/app/services/fireauth.service';
 
 @Component({
   selector: 'app-login',
@@ -10,13 +10,14 @@ import { FireAuthService } from 'src/app/services/FireAuthService';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  constructor() { 
+  private userCrud: UserCrud;
+  constructor(private firestore: FirestoreService, private fireauth: FireauthService) { 
+   this.userCrud = new UserCrud(firestore, fireauth); 
   }
 
   ngOnInit() {
   }
   LogIn()
   {
-    let user = new User("franco", "mail@francocanevali.com", "username", "password");
   }
 }
