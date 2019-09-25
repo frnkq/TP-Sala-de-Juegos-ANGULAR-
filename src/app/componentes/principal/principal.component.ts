@@ -11,7 +11,15 @@ export class PrincipalComponent implements OnInit {
     isFirstOpen: true,
     isFirstDisabled: false
   };
-  constructor() {  }
+  isLoggedIn = false;
+  user;
+  constructor() { 
+    this.user = localStorage.getItem("user");
+    if(this.user != null)
+    {
+      this.isLoggedIn = true;
+    }
+   }
 
   ngOnInit() {
   }

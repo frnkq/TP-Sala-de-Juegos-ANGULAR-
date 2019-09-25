@@ -25,8 +25,8 @@ import { JugadoresListadoComponent } from '../componentes/jugadores-listado/juga
 import { DedosrapidosComponent } from '../componentes/dedosrapidos/dedosrapidos.component';
 // declaro donde quiero que se dirija
 const MiRuteo = [
-  { path: 'Jugadores', component: JugadoresListadoComponent },
   { path: '', component: PrincipalComponent },
+  { path: 'Jugadores', component: JugadoresListadoComponent },
   { path: 'Login', component: LoginComponent },
   { path: 'Mapa', component: MapaDeGoogleComponent },
   { path: 'QuienSoy', component: QuienSoyComponent },

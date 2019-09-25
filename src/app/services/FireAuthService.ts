@@ -1,4 +1,4 @@
-import { AngularFireAuth } from 'firebase/auth' 
+import { AngularFireAuth } from 'angularfire2/auth' 
 export class FireAuthService
 {
     constructor (private fireauth: AngularFireAuth)

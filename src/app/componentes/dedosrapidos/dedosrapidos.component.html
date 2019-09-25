@@ -1,6 +1,7 @@
 <div class="fastFingers">
     <h1>Dedos rápidos</h1>
     <h2>Descubre cuantas palabras puedes escribir en un minuto</h2>
+    <div class="mb-3">
     <select name="nivel" id="lvlSelect">
         <option value="1">Nivel 1</option>
         <option value="2">Nivel 2</option>
@@ -8,6 +9,7 @@
         <option value="4">Nivel 4</option>
         <option value="5">Nivel 5</option>
     </select>
+    </div>
     <button *ngIf="!isGameRunning" (click)="startGame()" class="button">Empezar</button>
 
     <div *ngIf="isGameRunning" class="row">
