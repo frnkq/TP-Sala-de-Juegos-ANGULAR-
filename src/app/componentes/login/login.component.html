@@ -1,1 +1,14 @@
-<p (click)="LogIn()">login works!</p>
+<form [formGroup]="loginForm">
+    <label for="email">Correo electrónico</label>
+    <div class="input-group mb-3">
+        <input type="email" class="form-control" id="email" aria-describedby="basic-addon3" formControlName="email">
+    </div>
+    <label for="password">Contraseña</label>
+    <div class="input-group mb-3">
+        <input type="email" class="form-control" id="password" aria-describedby="basic-addon3" formControlName="password">
+    </div>
+    <div *ngIf="showSpinner">
+        spinner
+    </div>
+    <button type="submit" class="btn btn-danger" (click)="LogIn()" [disabled]="!loginForm.valid">Iniciar sesion</button>
+</form>

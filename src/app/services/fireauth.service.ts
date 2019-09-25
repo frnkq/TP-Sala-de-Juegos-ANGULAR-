@@ -22,14 +22,6 @@ export class FireauthService {
 
   public LogIn(email: string, password: string)
   {
-    let retorno;
-    this.fireAuth.auth.signInWithEmailAndPassword(email, password).then(function(userCredentials){
-      retorno = userCredentials;
-      console.log("logged in");
-      console.log(userCredentials.user);
-    }).catch(function(error){
-      console.error(error);
-    })
-    return retorno;
+    return this.fireAuth.auth.signInWithEmailAndPassword(email, password);
   }
 }
