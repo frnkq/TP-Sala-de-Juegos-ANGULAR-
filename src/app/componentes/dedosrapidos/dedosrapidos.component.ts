@@ -7,7 +7,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DedosrapidosComponent implements OnInit, AfterViewInit {
 
-  listOfWords: string[];
+  //listOfWords: string[];
+  level = 1;
+  level1: string[];
+  level2: string[];
+  level3: string[];
+  level4: string[];
+  level5: string[];
   @Output() currentWord: string;
   @Output() nextWord: string;
   @Input() stringWritten: string;
@@ -29,8 +35,18 @@ export class DedosrapidosComponent implements OnInit, AfterViewInit {
   }
 
   constructor(private http: HttpClient) {
-    this.http.get('../../assets/words.txt', { responseType: 'text' }).subscribe(data => this.populateWordsArray(data));
-    this.listOfWords = [];
+    //this.http.get('../../assets/words.txt', { responseType: 'text' }).subscribe(data => this.populateWordsArray(data));
+    //this.listOfWords = [];
+    this.level1 = [];
+    this.level2 = [];
+    this.level3 = [];
+    this.level4 = [];
+    this.level5 = [];
+    this.http.get('../../assets/level1.txt', { responseType: 'text' }).subscribe(data => this.populateWordsArray(data, 1));
+    this.http.get('../../assets/level2.txt', { responseType: 'text' }).subscribe(data => this.populateWordsArray(data, 2));
+    this.http.get('../../assets/level3.txt', { responseType: 'text' }).subscribe(data => this.populateWordsArray(data, 3));
+    this.http.get('../../assets/level4.txt', { responseType: 'text' }).subscribe(data => this.populateWordsArray(data, 4));
+    this.http.get('../../assets/level5.txt', { responseType: 'text' }).subscribe(data => this.populateWordsArray(data, 5));
     this.timeLeft = 60;
     this.score = 0;
     this.isGameRunning = false;
@@ -38,9 +54,42 @@ export class DedosrapidosComponent implements OnInit, AfterViewInit {
     this.isGameFinished = false;
   }
 
-  populateWordsArray(textFileContent) {
-    for (const line of textFileContent.split(/[\r\n]+/)) {
-      this.listOfWords.push(line);
+  populateWordsArray(textFileContent, level) {
+    switch (level) {
+      case 1:
+        for (const line of textFileContent.split(/[\r\n]+/)) {
+          this.level1.push(line);
+        }
+
+        break;
+
+      case 2:
+
+        for (const line of textFileContent.split(/[\r\n]+/)) {
+          this.level2.push(line);
+        }
+        break;
+
+      case 3:
+
+        for (const line of textFileContent.split(/[\r\n]+/)) {
+          this.level3.push(line);
+        }
+        break;
+
+      case 4:
+
+        for (const line of textFileContent.split(/[\r\n]+/)) {
+          this.level4.push(line);
+        }
+        break;
+
+      case 5:
+        for (const line of textFileContent.split(/[\r\n]+/)) {
+          this.level5.push(line);
+        }
+
+        break;
     }
   }
 
@@ -48,7 +97,7 @@ export class DedosrapidosComponent implements OnInit, AfterViewInit {
   }
 
   checkAccuracy($event) {
-    //principle of inocence
+    //principle of innocence
     this.wordsDontMatch = false;
 
     if (this.isGameRunning) {
@@ -61,7 +110,7 @@ export class DedosrapidosComponent implements OnInit, AfterViewInit {
 
       //correct word
       if ($event == this.currentWord) {
-        this.score++;
+        this.score += 1 * this.level;
         this.getNewWord();
         this.stringWritten = "";
         this.wordsDontMatch = false;
@@ -81,6 +130,12 @@ export class DedosrapidosComponent implements OnInit, AfterViewInit {
   }
 
   startGame() {
+    //get level
+    var e = (document.getElementById("lvlSelect")) as HTMLSelectElement;
+    var sel = e.selectedIndex;
+    var opt = e.options[sel];
+    this.level = Number.parseInt((<HTMLSelectElement><unknown>opt).value);
+    console.log("playing in level "+this.level);
     this.isGameFinished = false;
     this.timeLeft = 60;
     this.score = 0;
@@ -95,8 +150,26 @@ export class DedosrapidosComponent implements OnInit, AfterViewInit {
   }
 
   getRandomWord() {
-    let random = Math.floor(Math.random() * (this.listOfWords.length - 0)) + 0;
-    return this.listOfWords[random];
+    let listOfWords = new Array<string>();
+    switch (this.level) {
+      case 1:
+        listOfWords = this.level1;
+        break;
+      case 2:
+        listOfWords = this.level2;
+        break;
+      case 3:
+        listOfWords = this.level3;
+        break;
+      case 4:
+        listOfWords = this.level4;
+        break;
+      case 5:
+        listOfWords = this.level5;
+
+    }
+    let random = Math.floor(Math.random() * (listOfWords.length - 0)) + 0;
+    return listOfWords[random];
   }
 
   endGame() {
