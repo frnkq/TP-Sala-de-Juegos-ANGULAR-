@@ -23,6 +23,7 @@ import { MapaDeGoogleComponent } from '../componentes/mapa-de-google/mapa-de-goo
 import { JugadoresListadoComponent } from '../componentes/jugadores-listado/jugadores-listado.component';
 
 import { DedosrapidosComponent } from '../componentes/dedosrapidos/dedosrapidos.component';
+import { AgilidadComponent } from '../componentes/agilidad/agilidad.component';
 // declaro donde quiero que se dirija
 const MiRuteo = [
   { path: '', component: PrincipalComponent },
@@ -44,7 +45,8 @@ const MiRuteo = [
         { path: 'Adivina', component: AdivinaElNumeroComponent },
         { path: 'AdivinaMasListado', component: AdivinaMasListadoComponent },
         { path: 'AgilidadaMasListado', component: AgilidadMasListadoComponent },
-        { path: 'Agilidad', component: AgilidadAritmeticaComponent },
+        //{ path: 'Agilidad', component: AgilidadAritmeticaComponent },
+        { path: 'Agilidad', component: AgilidadComponent },
         { path: 'DedosRapidos', component: DedosrapidosComponent }
       ]
   },

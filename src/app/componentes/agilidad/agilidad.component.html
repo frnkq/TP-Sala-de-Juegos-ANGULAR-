@@ -1,0 +1,31 @@
+<div class="text-center">
+    <h1>Agilidad Aritmetica</h1>
+    <div class="card">
+        <div *ngIf="gameStarted">
+            <div class="row">
+                <div class="col-12">
+                    Level {{level}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    {{operation}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    Input
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn btn-success" (click)="Answer()">Enviar</button>
+                    <button class="btn btn-warning" (click)="GetNewOperation()">Saltear</button>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="!gameStarted">
+            <button class="btn btn-success" (click)="StartGame()"><h1>Empezar</h1></button>
+        </div>
+    </div>
+</div>

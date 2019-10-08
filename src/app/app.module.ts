@@ -48,7 +48,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { FirestoreService } from './services/firestore.service';
-import { FireauthService } from './services/fireauth.service'
+import { FireauthService } from './services/fireauth.service';
+import { AgilidadComponent } from './componentes/agilidad/agilidad.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,6 +76,7 @@ import { FireauthService } from './services/fireauth.service'
     InputJugadoresComponent,
     SexoPipe,
     DedosrapidosComponent,
+    AgilidadComponent,
   ],
   imports: [
     BrowserModule,
