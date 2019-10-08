@@ -165,6 +165,7 @@ export class AgilidadComponent implements OnInit, AfterViewInit {
       this.score += 1 * this.level;
       this.GetNewOperation();
       this.resultWritten = "";
+      this.textarea.first.nativeElement.value = "";
       this.resultsDontMatch = false;
       console.log("score", this.score);
     }
