@@ -1,6 +1,13 @@
-<div class="text-center">
+<div class="text-center agilidad">
     <h1>Agilidad Aritmetica</h1>
     <div class="card">
+          <select *ngIf="!gameStarted" name="nivel" id="lvlSelect">
+        <option value="1">Nivel 1</option>
+        <option value="2">Nivel 2</option>
+        <option value="3">Nivel 3</option>
+        <option value="4">Nivel 4</option>
+        <option value="5">Nivel 5</option>
+    </select>
         <div *ngIf="gameStarted">
             <div class="row">
                 <div class="col-12">
@@ -14,18 +21,31 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    Input
+                    <textarea rows="1" #myInput *ngIf="gameStarted" [ngClass]="resultsDontMatch ? 'unmatch' : 'match'"
+                        [(ngModel)]="resultWritten" (ngModelChange)="checkAccuracy($event)"></textarea>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <button class="btn btn-success" (click)="Answer()">Enviar</button>
                     <button class="btn btn-warning" (click)="GetNewOperation()">Saltear</button>
                 </div>
             </div>
         </div>
         <div *ngIf="!gameStarted">
-            <button class="btn btn-success" (click)="StartGame()"><h1>Empezar</h1></button>
+            <button class="btn btn-success" (click)="StartGame()">
+                <h1>Empezar</h1>
+            </button>
+        </div>
+        <div *ngIf="gameStarted" class="row">
+            Tiempo restante:
+            <span [ngClass]="timeLeft <= 15 ? 'redText' : (timeLeft <= 30 ? 'yellowText' : 'whiteText')">
+                {{ timeLeft }}
+            </span>
+            <br>
+            Puntaje: {{ score }}
+        </div>
+        <div *ngIf="isGameFinished">
+            <h1>Felicitaciones, tu puntaje es: {{ score }} </h1>
         </div>
     </div>
 </div>

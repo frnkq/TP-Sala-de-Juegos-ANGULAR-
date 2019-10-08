@@ -1,15 +1,18 @@
-import { Component, OnInit, Output, Input } from '@angular/core';
+import { Component, OnInit, Output, Input, AfterViewInit, ViewChildren, ElementRef, QueryList } from '@angular/core';
 
 @Component({
   selector: 'app-agilidad',
   templateUrl: './agilidad.component.html',
   styleUrls: ['./agilidad.component.css']
 })
-export class AgilidadComponent implements OnInit {
+export class AgilidadComponent implements OnInit, AfterViewInit {
 
   @Output() gameStarted = false;
   operation: string; //math operation
-  level = 5; 
+  resultsDontMatch = false;
+  level = 1; 
+  score = 0;
+  isGameFinished = false;
   /*
     Level 1: Single digit numbers. Addition, substraction. Only positives.
     Level 2: Two digit numbers. Addition, substraction. Only positives.
@@ -19,16 +22,40 @@ export class AgilidadComponent implements OnInit {
   */
   
   result: number;
+  @Input() resultWritten: string;
   numA;
   numB;
+  interval: any;
+  @Output() timeLeft;
+  @ViewChildren("myInput") textarea: QueryList<ElementRef>;
   constructor() { }
+
+  ngAfterViewInit(): void {
+    this.textarea.changes.subscribe((list: QueryList<ElementRef>) => {
+      if (list.length > 0) {
+        list.first.nativeElement.focus();
+      }
+    });
+  }
+
 
   ngOnInit() {
   }
 
   StartGame() {
+    //selecting game
+    var e = (document.getElementById("lvlSelect")) as HTMLSelectElement;
+    var sel = e.selectedIndex;
+    var opt = e.options[sel];
+    this.level = Number.parseInt((<HTMLSelectElement><unknown>opt).value);
+    console.log("playing in level "+this.level);
+    this.timeLeft = 60;
+    this.score = 0;
     this.gameStarted = true;
+    this.countDown();
     this.GetNewOperation();
+    this.isGameFinished = false;
+    this.resultWritten;
   }
 
   Answer()
@@ -38,6 +65,7 @@ export class AgilidadComponent implements OnInit {
   }
 
   GetNewOperation() {
+    
     this.numA = this.getRandom(0, 10);
     this.numB = this.getRandom(0, 10);
 
@@ -123,5 +151,42 @@ export class AgilidadComponent implements OnInit {
 
   private getRandom(max, min) {
     return Math.floor(Math.random() * (max - min )) + min;
+  }
+
+  private checkAccuracy($event)
+  {
+    this.resultsDontMatch = false;
+    if(Number.parseInt($event) != this.result)
+    {
+      this.resultsDontMatch = true;
+    }
+    else
+    {
+      this.score += 1 * this.level;
+      this.GetNewOperation();
+      this.resultWritten = "";
+      this.resultsDontMatch = false;
+      console.log("score", this.score);
+    }
+  }
+
+  endGame(){
+    this.gameStarted = false;
+    this.isGameFinished = true;
+    this.resultWritten = "";
+  }
+
+  private countDown()
+  {
+    var that = this;
+    console.log("staring countdown");
+    this.interval = setInterval(function(passTime){
+      if(that.timeLeft <= 1)
+      {
+        clearInterval(that.interval);
+        that.endGame();
+      }
+      that.timeLeft--;
+    }, 1000);
   }
 }
