@@ -7,6 +7,7 @@ export interface IUser
         piedraPapelTijera: number,
         taTeTi: number,
         adivinaElNumero: number,
-        dedosRapidos: number
+        dedosRapidos: number,
+        anagrama: number
       }
 }

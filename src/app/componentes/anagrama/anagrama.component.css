@@ -1,0 +1,37 @@
+.anagrama
+{
+    background-color: #333;
+    color:white;
+    margin:none;
+    padding:20px;
+    text-align: center;
+}
+.unmatch
+{
+    color:white;
+    background-color:red;
+}
+.match
+{ 
+    color:white;
+    background-color: green;
+}
+.letter
+{
+    padding: 3px;
+    border: 1px solid black;
+    margin-right: 3px;
+    font-size: 1.2em;
+}
+.yellowText
+{
+    color:yellow;
+}
+.redText
+{
+    color:red;
+}
+.whiteText
+{
+    color:white;
+}

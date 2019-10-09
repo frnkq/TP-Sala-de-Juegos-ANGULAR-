@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, Input, AfterViewInit, ViewChildren, ElementRef, QueryList } from '@angular/core';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
   selector: 'app-agilidad',
@@ -28,7 +29,6 @@ export class AgilidadComponent implements OnInit, AfterViewInit {
   interval: any;
   @Output() timeLeft;
   @ViewChildren("myInput") textarea: QueryList<ElementRef>;
-  constructor() { }
 
   ngAfterViewInit(): void {
     this.textarea.changes.subscribe((list: QueryList<ElementRef>) => {
@@ -41,6 +41,10 @@ export class AgilidadComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
   }
+
+  constructor(private userService: LocalStorageService) {
+    console.log(this.userService.GetScores());
+   }
 
   StartGame() {
     //selecting game
@@ -175,6 +179,7 @@ export class AgilidadComponent implements OnInit, AfterViewInit {
     this.gameStarted = false;
     this.isGameFinished = true;
     this.resultWritten = "";
+    this.userService.UpdateUserScore('agilidad', this.score);
   }
 
   private countDown()

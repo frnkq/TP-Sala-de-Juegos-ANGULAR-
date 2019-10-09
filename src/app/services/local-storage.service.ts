@@ -20,7 +20,8 @@ export class LocalStorageService
         piedraPapelTijera: 0,
         taTeTi: 0,
         adivinaElNumero: 0,
-        dedosRapidos: 0
+        dedosRapidos: 0,
+        anagrama: 0
       }
     }
 
@@ -84,6 +85,10 @@ export class LocalStorageService
         this.currentUser.scores.agilidad += score;
         break;
 
+      case 'anagrama':
+        this.currentUser.scores.anagrama += score;
+        break;
+
         case 'piedraPapelTijera':
         this.currentUser.scores.piedraPapelTijera += score;
         break;
@@ -119,7 +124,8 @@ export class LocalStorageService
       piedraPapelTijera: number,
       taTeTi: number,
       adivinaElNumero: number,
-      dedosRapidos: number
+      dedosRapidos: number,
+      anagrama: number
     }
   }[]
   {
