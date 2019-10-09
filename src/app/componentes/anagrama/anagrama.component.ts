@@ -43,7 +43,7 @@ export class AnagramaComponent implements OnInit, AfterViewInit {
   StartGame()
   {
     this.score = 0;
-    this.timeLeft = 10;
+    this.timeLeft = 60;
     this.gameStarted = true;
     this.NewWord();
     this.countDown();

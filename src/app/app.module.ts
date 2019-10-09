@@ -49,7 +49,9 @@ import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { FirestoreService } from './services/firestore.service';
 import { FireauthService } from './services/fireauth.service';
-import { AgilidadComponent } from './componentes/agilidad/agilidad.component'
+import { AgilidadComponent } from './componentes/agilidad/agilidad.component';
+import { TatetiComponent } from './componentes/tateti/tateti.component';
+import { CeldaComponent } from './componentes/tateti/celda/celda.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -77,6 +79,8 @@ import { AgilidadComponent } from './componentes/agilidad/agilidad.component'
     SexoPipe,
     DedosrapidosComponent,
     AgilidadComponent,
+    TatetiComponent,
+    CeldaComponent,
   ],
   imports: [
     BrowserModule,

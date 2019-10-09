@@ -1,0 +1,27 @@
+<div class="tateti">
+    <div *ngIf="!gameStarted">
+        <button class="btn btn-success" (click)="init()">
+            <h1>Empezar</h1>
+        </button>
+    </div>
+    <div *ngIf="gameStarted">
+        <div class="clearfix">
+            <my-cell *ngFor="let cell of cells | slice: 0: 3; let i = index" [value]="cell" (userClick)=clickHandler(i)>
+            </my-cell><br>
+        </div>
+
+        <div class="clearfix">
+            <my-cell *ngFor="let cell of cells | slice: 3: 6; let i = index" [value]="cell"
+                (userClick)=clickHandler(i+3)>
+            </my-cell><br>
+        </div>
+        <div class="clearfix">
+            <my-cell *ngFor="let cell of cells | slice: 6; let i = index" [value]="cell" (userClick)=clickHandler(i+6)>
+            </my-cell><br>
+        </div>
+        <div *ngIf="winner">
+            Ganó: {{winner}}
+            <button class="btn btn-warning" (click)="init()">Nueva partida</button>
+        </div>
+    </div>
+</div>
