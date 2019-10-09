@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, Input, ViewChild, ElementRef, ViewChildren, QueryList, AfterViewInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 @Component({
   selector: 'app-game',
   templateUrl: './dedosrapidos.component.html',
@@ -34,7 +35,7 @@ export class DedosrapidosComponent implements OnInit, AfterViewInit {
     });
   }
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private userService: LocalStorageService) {
     //this.http.get('../../assets/words.txt', { responseType: 'text' }).subscribe(data => this.populateWordsArray(data));
     //this.listOfWords = [];
     this.level1 = [];
@@ -176,5 +177,6 @@ export class DedosrapidosComponent implements OnInit, AfterViewInit {
     this.isGameRunning = false;
     this.isGameFinished = true;
     this.stringWritten = "";
+    this.userService.UpdateUserScore('dedosRapidos', this.score);
   }
 }

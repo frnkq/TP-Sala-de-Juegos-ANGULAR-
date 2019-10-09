@@ -1,14 +1,31 @@
-<form [formGroup]="loginForm">
+<form [formGroup]="loginForm" *ngIf="!register">
     <label for="email">Correo electrónico</label>
     <div class="input-group mb-3">
         <input type="email" class="form-control" id="email" aria-describedby="basic-addon3" formControlName="email">
     </div>
     <label for="password">Contraseña</label>
     <div class="input-group mb-3">
-        <input type="email" class="form-control" id="password" aria-describedby="basic-addon3" formControlName="password">
+        <input type="password" class="form-control" id="password" aria-describedby="basic-addon3" formControlName="password">
     </div>
     <div *ngIf="showSpinner">
         spinner
     </div>
     <button type="submit" class="btn btn-danger" (click)="LogIn()" [disabled]="!loginForm.valid">Iniciar sesion</button>
+    <span (click)="register = !register">Registrarse</span>
+</form>
+
+<form [formGroup]="registerForm" *ngIf="register">
+    <label for="email">Correo electrónico</label>
+    <div class="input-group mb-3">
+        <input type="email" class="form-control" id="email" aria-describedby="basic-addon3" formControlName="emailRegister">
+    </div>
+    <label for="password">Contraseña</label>
+    <div class="input-group mb-3">
+        <input type="password" class="form-control" id="password" aria-describedby="basic-addon3" formControlName="passwordRegister">
+    </div>
+    <div *ngIf="showSpinner">
+        spinner
+    </div>
+    <button type="submit" class="btn btn-danger" (click)="Register()" [disabled]="!registerForm.valid">Registrarse</button>
+    <span (click)="register = !register">Iniciar sesion</span>
 </form>

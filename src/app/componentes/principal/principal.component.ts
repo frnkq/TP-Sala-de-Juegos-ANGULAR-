@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
+import { IUser } from 'src/app/models/IUser';
 
 
 @Component({
@@ -13,17 +15,21 @@ export class PrincipalComponent implements OnInit {
   };
   isLoggedIn = false;
   user;
-  constructor() { 
-    this.user = localStorage.getItem("user");
-    if(this.user != null)
+  constructor(private userService: LocalStorageService) { 
+    this.user = this.userService.GetCurrentUser();
+    if((this.user as IUser).email != "guest")
     {
       this.isLoggedIn = true;
     }
-   }
+  }
 
   ngOnInit() {
   }
 
+  HasLoggedIn()
+  {
+    this.isLoggedIn = true;
+  }
  
 
 }

@@ -45,7 +45,7 @@
 
 </div>
 <div class="container" *ngIf="!isLoggedIn">
-  <app-login></app-login>
+  <app-login (hasLoggedIn)="HasLoggedIn()"></app-login>
 </div>
 <!--
   <a routerLink="/Juegos">
