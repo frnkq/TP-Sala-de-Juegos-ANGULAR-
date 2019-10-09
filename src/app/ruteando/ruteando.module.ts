@@ -26,6 +26,7 @@ import { DedosrapidosComponent } from '../componentes/dedosrapidos/dedosrapidos.
 import { AgilidadComponent } from '../componentes/agilidad/agilidad.component';
 import { AnagramaComponent } from '../componentes/anagrama/anagrama.component';
 import { TatetiComponent } from '../componentes/tateti/tateti.component';
+import { PptComponent } from '../componentes/ppt/ppt.component';
 // declaro donde quiero que se dirija
 const MiRuteo = [
   { path: '', component: PrincipalComponent },
@@ -47,6 +48,7 @@ const MiRuteo = [
         { path: 'Adivina', component: AdivinaElNumeroComponent },
         { path: 'Anagrama', component: AnagramaComponent },
         { path: 'Tateti', component:  TatetiComponent},
+        { path: 'Ppt', component:  PptComponent},
         { path: 'AdivinaMasListado', component: AdivinaMasListadoComponent },
         { path: 'AgilidadaMasListado', component: AgilidadMasListadoComponent },
         //{ path: 'Agilidad', component: AgilidadAritmeticaComponent },

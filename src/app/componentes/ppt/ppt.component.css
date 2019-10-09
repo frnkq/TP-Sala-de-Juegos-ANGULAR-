@@ -1,0 +1,46 @@
+.ppt
+{
+    background-color: #333;
+    color:white;
+    margin:none;
+    padding:20px;
+    text-align: center;
+}
+.selected
+{
+    border: 1px solid blue;
+
+}
+.notSelected
+{
+    border:none;
+}
+
+.piedra
+{
+    background-image: url('../../../assets/imagenes/piedra.png');
+    background-size: cover;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 240px;
+    width: 240px;
+}
+
+.papel
+{
+    background-image: url('../../../assets/imagenes/papel.png');
+    background-size: cover;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 240px;
+    width: 240px;
+}
+
+.tijera
+{
+    background-image: url('../../../assets/imagenes/tijeras.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 240px;
+    width: 240px;
+}

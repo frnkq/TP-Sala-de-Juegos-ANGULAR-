@@ -51,7 +51,8 @@ import { FirestoreService } from './services/firestore.service';
 import { FireauthService } from './services/fireauth.service';
 import { AgilidadComponent } from './componentes/agilidad/agilidad.component';
 import { TatetiComponent } from './componentes/tateti/tateti.component';
-import { CeldaComponent } from './componentes/tateti/celda/celda.component'
+import { CeldaComponent } from './componentes/tateti/celda/celda.component';
+import { PptComponent } from './componentes/ppt/ppt.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -81,6 +82,7 @@ import { CeldaComponent } from './componentes/tateti/celda/celda.component'
     AgilidadComponent,
     TatetiComponent,
     CeldaComponent,
+    PptComponent,
   ],
   imports: [
     BrowserModule,

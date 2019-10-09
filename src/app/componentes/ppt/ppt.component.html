@@ -1,0 +1,13 @@
+<div class="ppt">
+    <div class="row">
+        <div *ngFor="let choice of choices" class="col-3">
+            <div (click)="Choose(choice)" [ngClass]="userChoice == choice ? choice+' selected' : choice+' notSelected'">
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-success" (click)="Play()">Jugar</button>
+    <div>Computer {{ computerChoice }} </div>
+    <div>You {{ userChoice }} </div>
+    <div>Winner {{ winner }} </div>
+
+</div>
