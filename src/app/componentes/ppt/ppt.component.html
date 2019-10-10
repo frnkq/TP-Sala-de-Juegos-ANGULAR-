@@ -1,13 +1,22 @@
-<div class="ppt">
-    <div class="row">
-        <div *ngFor="let choice of choices" class="col-3">
-            <div (click)="Choose(choice)" [ngClass]="userChoice == choice ? choice+' selected' : choice+' notSelected'">
+<div class="ppt text-center" style="height:100%;">
+    <div class="row" style="margin-left: 10%;">
+        <div *ngFor="let choice of choices" class="col-md-4 ">
+            <div (click)="Choose(choice)"
+                [ngClass]="userChoice == choice ? choice+' selected choice' : choice+' notSelected choice'">
             </div>
         </div>
     </div>
-    <button class="btn btn-success" (click)="Play()">Jugar</button>
-    <div>Computer {{ computerChoice }} </div>
-    <div>You {{ userChoice }} </div>
-    <div>Winner {{ winner }} </div>
-
+    <div class="playing">
+        <h1 [ngClass]="showingMsg == 1 ? 'show' : 'hide'">{{playingMsg}}</h1>
+        <h1 [ngClass]="showingMsg == 2 ? 'show' : 'hide'">{{playingMsg}}</h1>
+        <h1 [ngClass]="showingMsg == 3 ? 'show' : 'hide'">{{playingMsg}}</h1>
+        <div [ngClass]="showingMsg == 4 ? 'show' : 'hide'">
+            <h1>{{winner}}</h1>
+            <br>
+            <button class=""><a href="/Juegos/Ppt"><h3>Juegar de nuevo</h3></a></button>
+        </div>
+    </div>
+    <div class="row game" style="margin-left: 10%;">
+        <button class="btn btn-success col-md-10 offset-md-2" (click)="Play()"><h3>Jugar</h3></button>
+    </div>
 </div>

@@ -1,11 +1,13 @@
-<div class="anagrama" style="height: 100%;">
+<div class="anagrama" style="height: 250%;">
+  <h1>Anagrama</h1>
   <div *ngIf="gameStarted">
+
     <span class="letter" *ngFor="let i of GetArray(distortedWord.length)">
       {{distortedWord[i]}}
     </span>
     <br>
-    <textarea rows="1" #myInput [ngClass]="wordsDontMatch ? 'unmatch' : 'match'"
-      [(ngModel)]="stringWritten" (ngModelChange)="CheckAccuracy($event)">
+    <textarea rows="1" #myInput [ngClass]="wordsDontMatch ? 'unmatch' : 'match'" [(ngModel)]="stringWritten"
+      (ngModelChange)="CheckAccuracy($event)">
 </textarea>
     <div>
       <button class="btn btn-warning" (click)="NewWord()">
@@ -15,7 +17,7 @@
         Puntaje {{ score }}
         <br>
         <span [ngClass]="timeLeft <= 15 ? 'redText' : (timeLeft <= 30 ? 'yellowText' : 'whiteText')">
-        Tiempo restante: {{ timeLeft }}
+          Tiempo restante: {{ timeLeft }}
         </span>
       </p>
     </div>

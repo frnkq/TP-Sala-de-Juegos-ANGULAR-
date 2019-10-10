@@ -1,4 +1,8 @@
 <div class="adivina" style="height: 100%;">
+    <h1>Adivina el número</h1>
+    <div *ngIf="isGameFinished">
+        Felicitaciones! tu puntaje es {{ score }}
+    </div>
     <div *ngIf="!isGameStarted">
         <button class="btn btn-success bgbtn" (click)="StartGame()">Empezar</button>
     </div>
@@ -11,8 +15,5 @@
         <p>
             Tiempo restante: {{timeLeft}}
         </p>
-    </div>
-    <div *ngIf="isGameFinished">
-        Felicitaciones tu puntaje es {{ score }}
     </div>
 </div>

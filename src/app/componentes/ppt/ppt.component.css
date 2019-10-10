@@ -8,13 +8,14 @@
 }
 .selected
 {
-    border: 1px solid blue;
-
+    border: 5px dotted white;
+    padding:10px;
 }
 .notSelected
 {
     border:none;
 }
+
 
 .piedra
 {
@@ -41,6 +42,29 @@
     background-image: url('../../../assets/imagenes/tijeras.png');
     background-size: 100%;
     background-repeat: no-repeat;
+    background-position: 0px 50px;
     height: 240px;
     width: 240px;
+}
+
+.game
+{
+    margin-top: 50px;
+}
+
+.show
+{
+    display: block;
+}
+.hide
+{
+    display:none;
+}
+
+h1
+{
+    transition: display 1s;
+    text-transform: uppercase;
+    margin-top: 50px;
+    
 }

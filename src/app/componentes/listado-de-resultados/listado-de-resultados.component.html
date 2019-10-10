@@ -1,48 +1,46 @@
-<!--div *ngFor="let juego of listado">
+<app-menu></app-menu>
+<app-cabecera></app-cabecera>
+<div class="container-fluid p-5">
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>
+          Jugador
+          <br>
+          <select id="user" [formControl]="userSelect">
+            <option value="all" selected>Todos</option>
+            <option *ngFor="let user of listOfUsers" value="{{user}}">{{user}}</option>
+          </select>
+          <br>
+        </th>
+        <th>
+          Juego
+          <br>
+          <select id="game" [formControl]="gameSelect">
+            <option value="all" selected="selected">Todos</option>
+            <option *ngFor="let game of listOfGames" value="{{game}}">{{game}}</option>
+          </select>
+        </th>
+        <th>Resultado</th>
+      </tr>
+      <tr><button (click)="ApplyFilter()">Aplicar filtros</button></tr>
+    </thead>
+    <tbody *ngIf="!isFiltered">
+      <tr *ngFor="let entry of listado">
+        <td>{{entry.user}} </td>
+        <td>{{entry.game}}</td>
+        <td>{{entry.score}}</td>
+      </tr>
 
-<p> {{juego.nombre}} </p>
-<p> {{juego.jugador}} </p>
+    </tbody>
+    <tbody *ngIf="isFiltered">
+      <tr *ngFor="let entry of filteredListado">
+        <td>{{entry.user}} </td>
+        <td>{{entry.game}}</td>
+        <td>{{entry.score}}</td>
+      </tr>
 
-</div-->
+    </tbody>
+  </table>
 
-<table class="table table-condensed">
-  <thead>
-    <tr>
-      <th>
-        Jugador
-        <br>
-        <select id="user" [formControl]="userSelect">
-          <option value="all" selected>Todos</option>
-          <option *ngFor="let user of listOfUsers" value="{{user}}">{{user}}</option>
-        </select>
-        <br>
-      </th>
-      <th>
-        Juego
-        <br>
-        <select id="game" [formControl]="gameSelect">
-          <option value="all" selected="selected">Todos</option>
-          <option *ngFor="let game of listOfGames" value="{{game}}">{{game}}</option>
-        </select>
-      </th>
-      <th>Resultado</th>
-    </tr>
-    <tr><button (click)="ApplyFilter()">Aplicar filtros</button></tr>
-  </thead>
-  <tbody *ngIf="!isFiltered">
-    <tr *ngFor="let entry of listado">
-      <td>{{entry.user}} </td>
-      <td>{{entry.game}}</td>
-      <td>{{entry.score}}</td>
-    </tr>
-
-  </tbody>
-  <tbody *ngIf="isFiltered">
-    <tr *ngFor="let entry of filteredListado">
-      <td>{{entry.user}} </td>
-      <td>{{entry.game}}</td>
-      <td>{{entry.score}}</td>
-    </tr>
-
-  </tbody>
-</table>
+</div>
