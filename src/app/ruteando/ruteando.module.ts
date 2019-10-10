@@ -30,12 +30,14 @@ import { PptComponent } from '../componentes/ppt/ppt.component';
 import { AdivinaComponent } from '../componentes/adivina/adivina.component';
 // declaro donde quiero que se dirija
 const MiRuteo = [
-  { path: '', component: PrincipalComponent },
+  { path: '', component: PrincipalComponent, children:[
+    {path: 'Login', component: RegistroComponent}
+  ] },
   { path: 'Jugadores', component: JugadoresListadoComponent },
-  { path: 'Login', component: LoginComponent },
+  //{ path: 'Login', component: LoginComponent },
   { path: 'Mapa', component: MapaDeGoogleComponent },
   { path: 'QuienSoy', component: QuienSoyComponent },
-  { path: 'Registro', component: RegistroComponent },
+  //{ path: 'Login', component: RegistroComponent },
   { path: 'Principal', component: PrincipalComponent },
   { path: 'Listado', component: ListadoComponent },
   { path: 'Paises', component: ListadoDePaisesComponent },
