@@ -20,7 +20,7 @@ export class RegistroComponent implements OnInit
   registerForm: FormGroup;
   loginForm: FormGroup;
   message;
-  wantsToLogIn;
+  wantsToLogIn = true;
   constructor(private userService: LocalStorageService, private router:Router) {
    }
 
@@ -64,14 +64,14 @@ export class RegistroComponent implements OnInit
       let password = this.loginForm.controls.passwordLogin.value;
       let result = this.userService.LogIn(email, password);
       console.log(result);
-      setTimeout(()=>{}, 3000);
+      setTimeout(()=>{}, 1500);
       if(!result)
       {
         this.message = "Hubo un error al iniciar sesion, por favor intente de nuevo";
       }
       else
       {
-        this.router.navigate(["/"]);
+        this.router.navigateByUrl("/Juegos");
       }
     }
     else
@@ -88,7 +88,7 @@ export class RegistroComponent implements OnInit
       let email = this.registerForm.controls.email.value;
       let password = this.registerForm.controls.password.value;
       let result = this.userService.Register(email, password);
-      setTimeout(()=>{}, 3000);
+      setTimeout(()=>{}, 1500);
       if(!result)
       {
         this.message = "Hubo un error al registrar, por favor intente de nuevo";
@@ -96,7 +96,7 @@ export class RegistroComponent implements OnInit
       else
       {
         this.userService.LogIn(email, password);
-        this.router.navigate(["/"]);
+        this.router.navigateByUrl("/Juegos");
       }
     }
     else

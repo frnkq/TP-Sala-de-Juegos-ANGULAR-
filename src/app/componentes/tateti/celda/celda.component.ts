@@ -2,7 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter, HostListener } from '@a
 
 @Component({
   selector: 'my-cell',
-  template: '<div>{{value}}</div>',
+  template: '<div class="{{value}}">{{value}}</div>',
   styleUrls: ['./celda.component.css']
 })
 export class CeldaComponent implements OnInit {

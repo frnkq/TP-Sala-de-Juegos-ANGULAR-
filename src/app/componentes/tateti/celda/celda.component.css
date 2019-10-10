@@ -1,1 +1,24 @@
-div {height: 30px; width: 30px; background-color: skyblue; float: left; margin: 0 4px 4px 0; color: black;}
+
+div
+{
+    height: 150px;
+    width: 150px;
+    border: 4px dotted white;
+    float: left;
+    margin: 0 4px 4px 0;
+    color: white;
+    font-size: 0em;
+    text-align: center;
+}
+
+.X
+{
+    background-image: url('../../../../assets/imagenes/x.jpg');
+    background-size: cover;
+}
+
+.O
+{
+    background-image: url('../../../../assets/imagenes/o.png');
+    background-size: cover;
+}

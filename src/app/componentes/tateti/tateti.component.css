@@ -2,6 +2,7 @@
     content: "";
     clear: both;
     display: table;
+    margin-left: 25%;
 }
 
 .tateti
@@ -11,4 +12,9 @@
     margin:none;
     padding:20px;
     text-align: center;
+    height:100%;
+}
+.center
+{
+    margin-left: 37%;
 }

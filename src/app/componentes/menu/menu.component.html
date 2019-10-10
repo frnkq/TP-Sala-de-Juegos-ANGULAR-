@@ -38,17 +38,16 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li class="active"><a routerLink="/Juegos">Menú de Juegos</a></li>
-                <li><a data-toggle="tooltip" title="Hooray!" (click)="Juego('Adivina')">Adivina</a></li>
-                <li><a  (click)="Juego('Agilidad')">Agilidad</a></li>
-                <li><a  (click)="Juego('DedosRapidos')">Dedos rápidos</a></li>
-                <li><a  (click)="Juego('AdivinaMasListado')">Adivina+listado</a></li>
-                <li><a  (click)="Juego('AgilidadaMasListado')">Agilidad+listado</a></li>
-                <li><a  (click)="Juego('AgilidadaMasListado')">Dedos rápidos + listado</a></li>
+                <li><a  (click)="Juego('Agilidad')">Agilidad aritmética</a></li>
+                <li><a  (click)="Juego('PPT')">Piedra Papel o Tijera</a></li>
+                <li><a  (click)="Juego('Anagrama')">Anagrama</a></li>
+                <li><a  (click)="Juego('taTeTi')">Ta te ti</a></li>
+                <li><a  (click)="Juego('Adivina')">Adivina</a></li>
+                <li><a  (click)="Juego('DedosRapidos')">Dedos rapidos</a></li>
+                <li><a  [routerLink]="['/Listado']">Listado de resultados</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Mis Datos</a></li>
-                  <li><a href="/Login"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
-                  <li><a href="" (click)="Logout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                  <li><a href="" *ngIf="isLoggedIn" (click)="Logout()"><span class="glyphicon glyphicon-log-out"></span> Cerrar sesion</a></li>
                 </ul>
         </div>
       </div>

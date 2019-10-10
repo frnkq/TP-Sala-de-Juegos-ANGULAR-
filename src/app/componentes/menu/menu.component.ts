@@ -8,10 +8,12 @@ import { LocalStorageService } from 'src/app/services/local-storage.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-
+  isLoggedIn: boolean;
   constructor(private route: ActivatedRoute,
     private router: Router,
-    private userService:LocalStorageService) { }
+    private userService:LocalStorageService) {
+      this.isLoggedIn = (localStorage.getItem("currentUser")) ? true : false;
+     }
 
   ngOnInit() {
   }
@@ -27,11 +29,14 @@ export class MenuComponent implements OnInit {
       case 'DedosRapidos':
           this.router.navigate(['/Juegos/DedosRapidos']);
         break;
-      case 'AdivinaMasListado':
-          this.router.navigate(['/Juegos/AdivinaMasListado']);
+      case 'PPT':
+          this.router.navigate(['/Juegos/Ppt']);
         break;
-      case 'AgilidadaMasListado':
-          this.router.navigate(['/Juegos/AgilidadaMasListado']);
+      case 'Anagrama':
+          this.router.navigate(['/Juegos/Anagrama']);
+        break;
+      case 'taTeTi':
+          this.router.navigate(['/Juegos/Tateti']);
         break;
     }
   }
