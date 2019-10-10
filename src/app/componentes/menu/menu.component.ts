@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
   selector: 'app-menu',
@@ -9,7 +10,8 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 export class MenuComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
-    private router: Router) { }
+    private router: Router,
+    private userService:LocalStorageService) { }
 
   ngOnInit() {
   }
@@ -33,5 +35,8 @@ export class MenuComponent implements OnInit {
         break;
     }
   }
-
+  Logout()
+  {
+    this.userService.LogOut();
+  }
 }

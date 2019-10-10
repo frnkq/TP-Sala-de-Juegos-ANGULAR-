@@ -27,6 +27,7 @@ import { AgilidadComponent } from '../componentes/agilidad/agilidad.component';
 import { AnagramaComponent } from '../componentes/anagrama/anagrama.component';
 import { TatetiComponent } from '../componentes/tateti/tateti.component';
 import { PptComponent } from '../componentes/ppt/ppt.component';
+import { AdivinaComponent } from '../componentes/adivina/adivina.component';
 // declaro donde quiero que se dirija
 const MiRuteo = [
   { path: '', component: PrincipalComponent },
@@ -45,7 +46,8 @@ const MiRuteo = [
     children:
       [
         { path: '', component: MenuCardComponent },
-        { path: 'Adivina', component: AdivinaElNumeroComponent },
+        //{ path: 'Adivina', component: AdivinaElNumeroComponent },
+        { path: 'Adivina', component: AdivinaComponent },
         { path: 'Anagrama', component: AnagramaComponent },
         { path: 'Tateti', component:  TatetiComponent},
         { path: 'Ppt', component:  PptComponent},

@@ -1,0 +1,18 @@
+.adivina
+{
+    background-color: #333;
+    color:white;
+    margin:none;
+    padding:20px;
+    text-align: center;
+}
+
+.bgbtn
+{
+    font-size: 1.3em;
+}
+
+input
+{
+    color: black;
+}

@@ -36,6 +36,10 @@ export class LocalStorageService
       this.currentUser = JSON.parse(localStorage.getItem("currentUser"));
   }
 
+  public LogOut()
+  {
+    localStorage.removeItem("currentUser");
+  }
   public LogIn(email: string, password: string): boolean
   {
     let success = false;

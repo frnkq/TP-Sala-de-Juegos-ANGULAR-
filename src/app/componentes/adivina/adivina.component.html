@@ -1,0 +1,18 @@
+<div class="adivina">
+    <div *ngIf="!isGameStarted">
+        <button class="btn btn-success bgbtn" (click)="StartGame()">Empezar</button>
+    </div>
+    <div *ngIf="isGameStarted">
+
+        <input type="text" #myInput [(ngModel)]="userGuess">
+        <br>
+        <button class="btn btn-success col-8 offset-2 bgbtn" (click)="Guess()">Adivinar</button>
+        <p *ngIf="message && messageTimer > 1">{{message}}</p>
+        <p>
+            Tiempo restante: {{timeLeft}}
+        </p>
+    </div>
+    <div *ngIf="isGameFinished">
+        Felicitaciones tu puntaje es {{ score }}
+    </div>
+</div>
