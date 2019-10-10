@@ -1,73 +1,121 @@
-<div class="container">
-  <div class="row text-center">
-
-    <div class="col-3 col-md-3 p-5">
-
-      <div class="row">
-        <div class="imagen cerebro">
-
-        </div>
-      </div>
-
-      <div class="row">
-        <h4>Velocidad y agilidad aritmética </h4>
-        <p class="title">Juego de agilidad mental</p>
-        <p>UTN FRA </p>
-        <p> <button class="button" (click)="Juego('Agilidad')">Jugar</button></p>
-      </div>
-
+<div class="container-fluid p-5 text-center">
+  <div class="game row text-center">
+    <div class="col-md-3">
+      <div class="imagen cerebro"></div>
     </div>
-
-
-    <div class="col-3 col-md-3">
-
-      <div class="row">
-        <div class="imagen ppt">
-        </div>
+    <div class="col-md-9 text-left  ">
+      <h1>Velocidad y agilidad aritmética</h1>
+      <div class="description">
+        <div class="descriptionTitle">Agiliza tu mente calculando rapidamente operaciones generadas al azar durante un
+          minuto</div>
+        <ul>
+          <li><u>Nivel 1:</u> Calculos de un sólo digito. Suma y resta. Sólo resultados positivos (1 pto. por cálculo)
+          </li>
+          <li><u>Nivel 2:</u> Calculos de dos digitos. Suma y resta. Sólo resultados positivos (2 ptos. por cálculo)
+          </li>
+          <li><u>Nivel 3:</u> Calculos de tres dígitos. Suma y resta. Resultados positivos y negativos. (3 ptos. por
+            cálculo)</li>
+          <li><u>Nivel 4:</u> Calculos de tres dígitos. Suma, resta y multiplicación.(4 ptos. por cálculo)</li>
+          <li><u>Nivel 5:</u> Calculos de cuatro dígitos. Suma, resta y multiplicación.(4 ptos. por cálculo)</li>
+        </ul>
       </div>
-
-      <div class="row">
-        <h4>Piedra Papel o Tijera</h4>
-        <p class="title">Juega contra la máquina</p>
-        <p>UTN FRA </p>
-        <p> <button class="button" (click)="Juego('PPT')">Jugar</button></p>
-      </div>
-
-    </div>
-
-
-    <div class="col-3 col-md-3">
-
-      <div class="row">
-        <div class="imagen adivina">
-          
-        </div>
-      </div>
-
-      <div class="row margin">
-        <h4 >Adivina el número secreto</h4>
-        <p class="title">Juega de estrategia</p>
-        <p>UTN FRA </p>
-        <p> <button class="button" (click)="Juego('Adivina')">Jugar</button></p>
-      </div>
-
-    </div>
-
-    <div class="col-3 col-md-3">
-
-      <div class="row">
-        <div class="imagen fastfingers">
-          
-        </div>
-      </div>
-
-      <div class="row margin">
-        <h4>Dedos rápidos</h4>
-        <p class="title">Compite midiendo tu velocidad de tipeo</p>
-        <p>UTN FRA </p>
-        <p> <button class="button" (click)="Juego('FastFingers')">Jugar</button></p>
-      </div>
-
+      <p> <button class="button col-md-12" (click)="Juego('Agilidad')">Jugar</button></p>
     </div>
   </div>
+
+  <div class="game row text-center">
+    <div class="col-md-3">
+      <div class="imagen ppt"></div>
+    </div>
+    <div class="col-md-9 text-left  ">
+      <h1>Piedra, Papel o Tijera</h1>
+      <div class="description">
+          <div class="descriptionTitle">Juega al clásico Piedra, Papel o Tijera contra la impredecible elección de la
+            computadora</div>
+          <p>Si le ganas, ganas un punto. Si empatas no ganas nada. Si pierdes, pierdes un punto.</p>
+      </div>
+      <p> <button class="button col-md-12" (click)="Juego('PPT')">Jugar</button></p>
+    </div>
+  </div>
+
+  <div class="game row text-center">
+    <div class="col-md-3">
+      <div class="imagen anagrama"></div>
+    </div>
+    <div class="col-md-9 text-left  ">
+      <h1>Anagrama</h1>
+      <div class="description">
+          <div class="descriptionTitle">¿Crees que puedes adivinar la palabra desordenada?</div>
+          <p>Trata de adivinar la mayor cantidad de palabras. Las mismas se presentarán de forma desordenada.
+            <br>
+            <a href="../../../assets/words.txt">Listado de palabras</a>
+          </p>
+      </div>
+      <p> <button class="button col-md-12" (click)="Juego('Anagrama')">Jugar</button></p>
+    </div>
+  </div>
+
+  <div class="game row text-center">
+    <div class="col-md-3">
+      <div class="imagen tateti"></div>
+    </div>
+    <div class="col-md-9 text-left  ">
+      <h1>Ta te ti</h1>
+      <div class="description">
+          <div class="descriptionTitle">Demuestra tus habilidades en el TaTeTi</div>
+          <p>
+            Desafia a un amigx a jugar al TaTeTi.
+          </p>
+          <ul>
+            Fichas:
+              <li>X: El primer jugador (quien ha iniciado sesion, donde se registrara el puntaje)</li>
+              <li>O: El segundo jugador</li>
+          </ul>
+      </div>
+      <p> <button class="button col-md-12" (click)="Juego('taTeTi')">Jugar</button></p>
+    </div>
+  </div>
+
+
+
+  <div class="game row text-center">
+    <div class="col-md-3">
+      <div class="imagen adivina"></div>
+    </div>
+    <div class="col-md-9 text-left  ">
+      <h1>Adivina el número</h1>
+      <div class="description">
+          <div class="descriptionTitle">Podrás adivinar el número en menos de un minuto?</div>
+          <p>
+            Tienes un minuto. Debes adivinar el número generado al azar (entre 0 y 100). Tu puntaje será igual al tiempo que resta una vez adivinado el número.
+          </p>
+      </div>
+      <p> <button class="button col-md-12" (click)="Juego('Adivina')">Jugar</button></p>
+    </div>
+  </div>
+
+  <div class="game row text-center">
+    <div class="col-md-3">
+      <div class="imagen fastfingers"></div>
+    </div>
+    <div class="col-md-9 text-left  ">
+      <h1>Dedos rápidos</h1>
+      <div class="description">
+          <div class="descriptionTitle">¿Eres rápido escribiendo en el teclado?</div>
+          <p>
+            Descubre tu velocidad de tipeo en el teclado escribiendo las palabras que son provistas lo más rápido posible.
+          </p>
+          <ul>
+            Niveles:
+              <li><u>Nivel 1</u>: 1 punto por palabra. <a href="../../../assets/level1.txt">Lista de palabras</a></li>
+              <li><u>Nivel 2</u>: 2 puntos por palabra. <a href="../../../assets/level2.txt">Lista de palabras</a></li>
+              <li><u>Nivel 3</u>: 3 punto por palabra. <a href="../../../assets/level3.txt">Lista de palabras</a></li>
+              <li><u>Nivel 4</u>: 4 punto por palabra. <a href="../../../assets/level4.txt">Lista de palabras</a></li>
+              <li><u>Nivel 5</u>: 5 punto por palabra. <a href="../../../assets/level5.txt">Lista de palabras</a></li>
+          </ul>
+      </div>
+      <p> <button class="button col-md-12" (click)="Juego('DedosRapidos')">Jugar</button></p>
+    </div>
+  </div>
+
 </div>

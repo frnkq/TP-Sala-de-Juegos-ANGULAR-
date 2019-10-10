@@ -22,7 +22,8 @@ img {
     border: none;
     text-align: center;
     cursor: pointer;
-    width: 20%;
+    width: 100%;
+    font-size: 1.5em;
   }
   
   .button:hover {background-color: #3e8e41}
@@ -37,6 +38,7 @@ img {
   {
     height:400px;
     background-size: cover;
+    background-repeat: no-repeat;
   }
   .cerebro
   {
@@ -46,6 +48,14 @@ img {
   {
     background-image: url('../../../assets/imagenes/ppt.jpg');
   }
+  .anagrama
+  {
+    background-image: url('../../../assets/imagenes/anagrama.jpg');
+  }
+  .tateti
+  {
+    background-image: url('../../../assets/imagenes/tateti.png');
+  }
   .adivina
   {
     background-image: url('../../../assets/imagenes/adivina.png');
@@ -53,4 +63,27 @@ img {
   .fastfingers
   {
     background-image: url('../../../assets/imagenes/fastfingers.jpg');
+  }
+
+  .description
+  {
+    font-size: 1.2em;
+  }
+
+  .descriptionTitle
+  {
+    font-size: 1.3em;
+  }
+  h1
+  {
+    text-align: center;
+    border-bottom: 3px solid black;
+  }
+
+  .game
+  {
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
   }
